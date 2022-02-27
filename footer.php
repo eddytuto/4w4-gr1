@@ -1,7 +1,7 @@
 <footer class="site__footer">
-    <h2 class="footer__titre">Le beau footer</h2>
-    <p class="footer__presentation">Un site web fait par une élève du TIM à l'aide de Wordpress.</p>
-    <h3 class="footer__author">Fait par Florence Lemieux Cayer</h3>
+    <h2 class="footer__titre">Footer</h2>
+    <p class="footer__presentation">Un site web fait par un élève du TIM à l'aide de Wordpress.</p>
+    <h3 class="footer__author">Modifié par Jonathan Mores et les élèves du programme de TIM</h3>
 
 <?php 
 

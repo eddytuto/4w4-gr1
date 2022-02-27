@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /*
-theme name: Exer-1 gr3
+Theme Name: Exercise#2-groupe1
+Theme URI: https://github.com/Hecatius/2022-4w4
+Author: Mores Jonathan
+Description: Description
 */
 /* ---------------------------------------------------------
 VARIABLES
@@ -466,15 +469,19 @@ COMPOSANTES
   transform: rotate(0);
 }
 
+#chk-burger {
+  display: none;
+}
+
 #chk-burger:checked ~ #burger {
   transform: rotate(90deg);
 }
 
-.menu-principal-container {
+.menu-menu-container {
   display: none;
 }
 
-#chk-burger:checked ~ .menu-principal-container {
+#chk-burger:checked ~ .menu-menu-container {
   display: block;
 }
 
@@ -513,6 +520,7 @@ COMPOSANTES
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #2f2a28;
   padding: 15px;
+  bottom: 0;
 }
 
 .site__footer__menu__ul {
@@ -576,13 +584,13 @@ theme name: Lab 2 Lemieux Florence
 .site {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "sidebar" "header" "main" "footer";
+  grid-template-areas: "sidebar" "header" "main" "footer";
 }
 
 @media screen and (min-width: 800px) {
   .site {
     grid-template-columns: 300px auto;
-    grid-template-areas: "header header" "sidebar main" "footer footer";
+    grid-template-areas: "header header" "sidebar main" "footer footer";
   }
 }
 /*# sourceMappingURL=style.css.map */
