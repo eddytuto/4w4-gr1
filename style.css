@@ -342,15 +342,15 @@ html {
 ÉLÉMENTS
 --------------------------------------------------------- */
 a {
-  color: #7b5647;
+  color: #2600ff;
 }
 
 a:visited {
-  color: #5c4033;
+  color: #a099ff;
 }
 
 a:hover, a:focus, a:active {
-  color: white;
+  color: #482edc;
 }
 
 a:focus {
@@ -515,7 +515,7 @@ COMPOSANTES
   display: block;
   text-decoration: none;
   padding: 4px;
-  background-color: #ffa3a3;
+  background-color: #e9a7ec;
 }
 
 .menu-item a:hover {
@@ -583,7 +583,7 @@ theme name: Lab 2 Lemieux Florence
 
 .site__barre {
   grid-area: sidebar;
-  background-color: #ff8585;
+  background-color: #373659;
 }
 
 .site__main {
