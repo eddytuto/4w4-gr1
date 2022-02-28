@@ -20,7 +20,6 @@
         display: flex;
         flex-wrap: wrap;
     }
-    
     &__cours {
         background-color: $color__background-cours;
         box-shadow: rgb(57, 64, 68) 1px -1px 10px;
@@ -37,13 +36,7 @@
         }
         padding: 10px;
     }
-
-
 }
-
-
-
-
 
 .cours__titre {
     font-size: 1.5rem;
