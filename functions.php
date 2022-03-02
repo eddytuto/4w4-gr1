@@ -1,5 +1,11 @@
 <?php 
 
+add_action('get_header', 'remove_admin_login_header');
+
+function remove_admin_login_header() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
+
 function cidw_4w4_enqueue(){
     //wp_enqueue_style('style_css', get_stylesheet_uri());
     wp_enqueue_style('4w4-le-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
