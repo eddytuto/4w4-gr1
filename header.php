@@ -16,12 +16,13 @@
 
 <body <?php body_class("site"); ?>>
     <header class="site__header">
-        <h1 class="header__titre">
+        <div class="site__header__titre">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php bloginfo('name'); ?>
+                <h1 class="titre"><?php bloginfo('name'); ?> </h1>
             </a>
-        </h1>
-        <h2 class="header__description"><?php bloginfo('description'); ?></h2>
+            <h2 class="description"><?php bloginfo('description'); ?></h2>
+        </div>
+        
         <div class="util">
             <div class="util__menu">
                 <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"

@@ -3,17 +3,22 @@
     background-color: $color__background-footer;
     padding: 15px;
     bottom: 0;
+    display: flex;
+    justify-content: center;
     
+    &__liens{ // .site__footer__liens
+      display : flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 1rem;
 
-    &__menu{ // .site__footer__menu
-
-      &__ul{ // .site__footer__menu__ul
-          display : flex;
+      &__ul{ // .site__footer__liens__ul
+          padding: 0;
           list-style-type: none;
-          justify-content: center;
-          .menu-item{ // .site__footer__menu__ul .menu-item
+          .menu-item{ // .site__footer__liens__ul .menu-item
               margin : 10px 5px;
-            a{ // .site__footer__menu__ul .menu-item a
+              
+            a{ // .site__footer__liens__ul .menu-item a
               display : flex;
               align-items: center;
               padding : 3px;

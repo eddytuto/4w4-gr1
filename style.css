@@ -346,7 +346,7 @@ a {
 }
 
 a:visited {
-  color: #a099ff;
+  color: black;
 }
 
 a:hover, a:focus, a:active {
@@ -456,18 +456,21 @@ html, body {
 .site__header {
   background-color: #373659;
   color: #fa9292;
-  padding-left: 10px;
+  padding-left: 20px;
   display: flex;
   align-items: center;
-  justify-content: end;
 }
 
-.header__titre {
+.site__header h1, .site__header h2, .site__header a {
+  vertical-align: baseline;
+}
+
+.titre {
   font-size: 3em;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-.header__description {
+.description {
   font-size: 1.5rem;
   margin-left: 0.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -520,7 +523,7 @@ html, body {
   display: block;
   text-decoration: none;
   padding: 4px;
-  background-color: #e9a7ec;
+  background-color: #b589c2;
 }
 
 .menu-item a:hover {
@@ -541,25 +544,33 @@ html, body {
   background-color: #2f2a28;
   padding: 15px;
   bottom: 0;
-}
-
-.site__footer__menu__ul {
   display: flex;
-  list-style-type: none;
   justify-content: center;
 }
 
-.site__footer__menu__ul .menu-item {
+.site__footer__liens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.site__footer__liens__ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.site__footer__liens__ul .menu-item {
   margin: 10px 5px;
 }
 
-.site__footer__menu__ul .menu-item a {
+.site__footer__liens__ul .menu-item a {
   display: flex;
   align-items: center;
   padding: 3px;
 }
 
-.site__footer__menu__ul .menu-item a svg {
+.site__footer__liens__ul .menu-item a svg {
   color: aqua;
 }
 
@@ -568,6 +579,26 @@ html, body {
 .footer__author {
   color: #ffcabc;
   text-align: center;
+}
+
+.recherche__text, .recherche__submit {
+  height: 1rem;
+}
+
+.erreur-404 {
+  background-color: #b95f85;
+}
+
+.erreur-404 h1 {
+  font-size: 5rem;
+}
+
+.erreur-404 h2 {
+  font-size: 2rem;
+}
+
+.erreur-404 p {
+  font-size: 1rem;
 }
 
 /* ---------------------------------------------------------
