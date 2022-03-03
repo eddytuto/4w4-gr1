@@ -455,7 +455,7 @@ html, body {
 
 .site__header {
   background-color: #373659;
-  color: #fa9292;
+  color: black;
   padding-left: 20px;
   display: flex;
   align-items: center;
@@ -582,7 +582,7 @@ html, body {
 .footer__titre,
 .footer__presentation,
 .footer__author {
-  color: #ffcabc;
+  color: white;
   text-align: center;
 }
 
