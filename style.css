@@ -486,6 +486,11 @@ html, body {
   display: flex;
 }
 
+.site__barre ul a {
+  display: flex;
+  align-items: center;
+}
+
 #burger {
   position: absolute;
   transition: transform .3s;
@@ -579,10 +584,6 @@ html, body {
 .footer__author {
   color: #ffcabc;
   text-align: center;
-}
-
-.recherche__text, .recherche__submit {
-  height: 1rem;
 }
 
 .erreur-404 {

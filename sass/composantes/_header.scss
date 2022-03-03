@@ -8,6 +8,7 @@
   h1,h2,a {
     vertical-align: baseline;
   }
+  
 }
 
 .titre {
@@ -28,3 +29,12 @@
       display : flex; 
     }
   }
+
+.site__barre{
+  ul{
+    a{
+      display: flex;
+      align-items: center;
+    }
+  }
+}
