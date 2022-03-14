@@ -6,6 +6,56 @@ Author: Mores Jonathan
 Description: Description
 */
 /* ---------------------------------------------------------
+ANIMATION
+--------------------------------------------------------- */
+.animation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.animation__bloc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #1161f7;
+  color: #fff;
+  font-size: 3rem;
+  transform: translateY(-100vh);
+}
+
+.animation__bloc:nth-of-type(1) {
+  animation: anim-entete 1s 0s forwards;
+}
+
+.animation__bloc:nth-of-type(2) {
+  animation: anim-entete 1s .25s forwards;
+}
+
+.animation__bloc:nth-of-type(3) {
+  animation: anim-entete 1s .5s forwards;
+}
+
+.animation__bloc:nth-of-type(4) {
+  animation: anim-entete 1s .75s forwards;
+}
+
+.animation__bloc:nth-of-type(5) {
+  animation: anim-entete 1s 1s forwards;
+}
+
+@keyframes anim-entete {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------------------------
 VARIABLES
 --------------------------------------------------------- */
 /* ---------------- BACKGROUND */
@@ -547,45 +597,65 @@ html, body {
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #2f2a28;
+  color: white;
   padding: 15px;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
 }
 
-.site__footer__liens {
+.site__footer__colonne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site__footer__colonne section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 1rem;
+  border: 1px solid #aaa;
+  flex: 0 0 30%;
 }
 
-.site__footer__liens__ul {
-  padding: 0;
+.site__footer__ligne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site__footer__ligne .footer__menu__nav__ul {
+  display: flex;
   list-style-type: none;
+  justify-content: center;
 }
 
-.site__footer__liens__ul .menu-item {
+.site__footer__ligne .footer__menu__nav__ul .menu-item {
   margin: 10px 5px;
 }
 
-.site__footer__liens__ul .menu-item a {
+.site__footer__ligne .footer__menu__nav__ul .menu-item a {
   display: flex;
   align-items: center;
   padding: 3px;
 }
 
-.site__footer__liens__ul .menu-item a svg {
-  color: aqua;
+.site__footer__ligne .footer__menu__nav__ul .menu-item a svg {
+  color: #f40b0b;
 }
 
+.site__footer__ligne .footer__menu__nav__ul .menu-item a:hover svg {
+  color: #19e123;
+}
+
+/*
+.site__footer {
+    font-family: $font__titre;
+    background-color: $color__background-footer;
+    padding: 15px;
+  }
 .footer__titre,
 .footer__presentation,
 .footer__author {
-  color: white;
+  color: $color__font-footer;
   text-align: center;
 }
-
+*/
 .erreur-404 {
   background-color: #b95f85;
 }
