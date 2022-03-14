@@ -17,10 +17,11 @@
 <body <?php body_class("site"); ?>>
     <header class="site__header">
         <div class="site__header__titre">
+            <?php the_custom_logo(); ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <h1 class="titre"><?php bloginfo('name'); ?> </h1>
+                <h1 class="header__titre"><?php bloginfo('name'); ?> </h1>
             </a>
-            <h2 class="description"><?php bloginfo('description'); ?></h2>
+            <h2 class="header__description"><?php bloginfo('description'); ?></h2>
         </div>
         
         <div class="util">

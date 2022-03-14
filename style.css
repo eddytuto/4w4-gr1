@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*
-Theme Name: Exercise#2-groupe1
+Theme Name: TP#1 Jonathan Mores
 Theme URI: https://github.com/Hecatius/2022-4w4
 Author: Mores Jonathan
-Description: Description
+Description: un TP conçues avec beaucoup d'amour.
 */
 /* ---------------------------------------------------------
 ANIMATION
@@ -63,6 +63,7 @@ VARIABLES
 /* ---------------- LIENS FOOTER */
 /* ---------------- LIENS HEADER titre principal du site */
 /* ---------------- FONT */
+/* ---------------- SVG */
 /* ------------------------------------- points de rupture des media queries */
 /* ---------------------------------------------------------
 INITIALISATION
@@ -508,32 +509,59 @@ html, body {
   color: black;
   padding-left: 20px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .site__header h1, .site__header h2, .site__header a {
   vertical-align: baseline;
 }
 
-.titre {
-  font-size: 3em;
+@media screen and (min-width: 700px) {
+  .site__header {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.site__header__titre {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.custom-logo-link,
+.header__titre {
+  font-size: clamp(2rem, 4vw, 6rem);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-.description {
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
+.header__description {
+  font-size: clamp(1rem, 2vw, 4rem);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .util {
-  margin-left: auto;
   display: flex;
   flex-direction: column;
+  width: 90%;
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .util {
+    width: 300px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
 }
 
 .util__menu {
   display: flex;
+}
+
+.util svg {
+  color: white;
 }
 
 .site__barre ul a {
@@ -656,6 +684,33 @@ html, body {
   text-align: center;
 }
 */
+.recherche {
+  display: flex;
+  border: 1px solid #aaa;
+  height: 30px;
+}
+
+.recherche__text {
+  border: none;
+  outline: none;
+  transition: background-color, .5s;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.recherche__text:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.recherche__submit {
+  border: none;
+  outline: none;
+}
+
+.recherche__submit svg {
+  color: #000;
+}
+
 .erreur-404 {
   background-color: #b95f85;
 }
@@ -675,9 +730,6 @@ html, body {
 /* ---------------------------------------------------------
 LAYOUT
 --------------------------------------------------------- */
-/*
-theme name: Lab 2 Lemieux Florence
-*/
 .site {
   background-color: #5a58df;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;

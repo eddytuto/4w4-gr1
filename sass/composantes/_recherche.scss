@@ -1,0 +1,23 @@
+.recherche{
+    display: flex;
+    border: 1px solid #aaa;
+    height: 30px;
+    &__text {
+        border:none;
+        outline:none;
+        transition: background-color, .5s;
+        background-color: rgba(#fff,0.1);
+        width: 100%;
+        &:focus{
+            background-color: rgba(#fff,0.3);
+        }
+    }
+
+    &__submit {
+        border: none;
+        outline: none;
+        svg{
+            color : #000;
+        }
+    }
+}
