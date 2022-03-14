@@ -34,4 +34,62 @@ add_filter("wp_nav_menu_objects","cidw_4w4_filtre_choix_menu");
 
 add_theme_support('post-thumbnails');
 
+
+/*---------------------------------------------------------- Enregistrement des sidebar */
+
+
+function my_register_sidebars() {
+    /* Register the 'primary' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'pied_page_colonne_1',
+            'name'          => __( 'Pied de page colonne 1' ),
+            'description'   => __( 'Colonne de pied de page' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'id'            => 'pied_page_colonne_2',
+            'name'          => __( 'Pied de page colonne 2' ),
+            'description'   => __( 'Colonne de pied de page' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'id'            => 'pied_page_colonne_3',
+            'name'          => __( 'Pied de page colonne 3' ),
+            'description'   => __( 'Colonne de pied de page' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'id'            => 'pied_page_ligne_1',
+            'name'          => __( 'Pied de page ligne 1' ),
+            'description'   => __( 'Colonne de pied de page' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+    /* Repeat register_sidebar() code for additional sidebars. */
+}
+
+add_action( 'widgets_init', 'my_register_sidebars' );
+
 ?>
