@@ -49,6 +49,19 @@ add_action( 'after_setup_theme', 'cidw_4w4_add_theme_support' );
 
 function my_register_sidebars() {
     /* Register the 'primary' sidebar. */
+
+    register_sidebar(
+        array(
+            'id'            => 'entete_1',
+            'name'          => __( 'Entete 1' ),
+            'description'   => __( 'Entete 1' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+
     register_sidebar(
         array(
             'id'            => 'pied_page_colonne_1',

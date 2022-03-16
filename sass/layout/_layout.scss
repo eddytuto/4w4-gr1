@@ -1,22 +1,27 @@
 .site {
     //background-color: rgb(122, 176, 207);
-    background-color: $color__background-body;
+    background-color: rgba($color__background-body,.2);
     font-family: $font__main;
+    
 }
-
-.home::after{
-    position : absolute;
+/* permet de segmenter le background
+ en utilisant clip-path sur un pseudo element du body */
+.home::after {
     content : "";
+    position : absolute;
     width : 100%;
     height : 100%;
     top:0;
     bottom:0;
     left:0;
-    right:0;
-    clip-path: polygon(83% 0, 100% 0, 100% 100%, 63% 100%);
-    background-color:$color__background-body-clip ;
+    right :0;
+    background-color: $color__background-body-clip;
+    clip-path: polygon(83% 0, 100% 0, 100% 100%, 57% 100%);
     z-index : -1;
+
 }
+
+
 
 
 
@@ -34,6 +39,7 @@
     grid-area: main;
     background-color: rgba($color__background-main,.5);
     padding: 10px 15px 10px 15px;
+    min-height: 100vh;
 }
 
 .site__footer{
@@ -61,10 +67,11 @@
             " main sidebar"
             "footer footer";
     }
-
+    
+/* permet de retirer la barre de menu principal pour la page d'accuei */
     .home {
         display: grid;
-        gap : 0px;
+        gap : 10px;
         grid-template-columns: auto;
         grid-template-areas:
             "sidebar"
@@ -72,6 +79,8 @@
             "main"
             "footer";
     }
+
+
 }
 
 

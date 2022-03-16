@@ -519,7 +519,7 @@ COMPOSANTES
 
 @media screen and (min-width: 700px) {
   .util {
-    width: 300px;
+    width: 350px;
     margin-left: auto;
     margin-right: 20px;
   }
@@ -641,6 +641,14 @@ COMPOSANTES
   color: #19e123;
 }
 
+#sidebar-pied_page_ligne_1 {
+  text-align: center;
+}
+
+.wp-block-social-links {
+  justify-content: center;
+}
+
 /*
 
 .site__footer {
@@ -674,40 +682,48 @@ COMPOSANTES
   font-size: 1rem;
 }
 
+/*
 .recherche {
-  display: flex;
-  border: 1px solid #aaa;
-  height: 30px;
-}
+    display : flex;
+    border : 1px solid #aaa;
+    height : 30px;
+    &__text {
+        border : none;
+        outline: none;
+        background-color: rgba(#fff, .1);
+        transition : background-color .5s;
+        width : 100%;
+        &:focus {
+            background-color: rgba(#fff, .3);
+        }
+        @media screen and (min-width: 700px)
+        {
+            width : 300px;
+        }
+    }
 
-.recherche__text {
+    &__submit {
+        display : flex;
+        align-items : center;
+        justify-content: center;
+        border : none;
+        outline: none;
+        svg{
+            color : #000;
+
+        }
+
+    }
+}
+*/
+.recherche .wp-block-search__button {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=search");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  padding: 0 5px 0 5px;
+  width: 30px;
   border: none;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color .5s;
-  width: 100%;
-}
-
-.recherche__text:focus {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-@media screen and (min-width: 700px) {
-  .recherche__text {
-    width: 300px;
-  }
-}
-
-.recherche__submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  outline: none;
-}
-
-.recherche__submit svg {
-  color: #000;
 }
 
 .cours__titre {
@@ -772,21 +788,23 @@ ANIMATION
 LAYOUT
 --------------------------------------------------------- */
 .site {
-  background-color: #6faee2;
+  background-color: rgba(111, 174, 226, 0.2);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+/* permet de segmenter le background
+ en utilisant clip-path sur un pseudo element du body */
 .home::after {
-  position: absolute;
   content: "";
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  clip-path: polygon(83% 0, 100% 0, 100% 100%, 63% 100%);
   background-color: #0b266a;
+  clip-path: polygon(83% 0, 100% 0, 100% 100%, 57% 100%);
   z-index: -1;
 }
 
@@ -804,6 +822,7 @@ LAYOUT
   grid-area: main;
   background-color: rgba(213, 230, 241, 0.5);
   padding: 10px 15px 10px 15px;
+  min-height: 100vh;
 }
 
 .site__footer {
@@ -823,9 +842,10 @@ LAYOUT
     grid-template-columns: auto 300px;
     grid-template-areas: "header header" " main sidebar" "footer footer";
   }
+  /* permet de retirer la barre de menu principal pour la page d'accuei */
   .home {
     display: grid;
-    gap: 0px;
+    gap: 10px;
     grid-template-columns: auto;
     grid-template-areas: "sidebar" "header" "main" "footer";
   }

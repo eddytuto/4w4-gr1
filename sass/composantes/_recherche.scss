@@ -1,3 +1,4 @@
+/*
 .recherche {
     display : flex;
     border : 1px solid #aaa;
@@ -29,4 +30,14 @@
         }
 
     }
+}
+*/
+.recherche .wp-block-search__button {
+    background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=search");
+    background-repeat: no-repeat ;
+    background-position: center;
+    margin-left :0;
+    padding : 0 5px 0 5px;
+    width : 30px;
+    border : none;
 }
