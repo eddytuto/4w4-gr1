@@ -17,12 +17,15 @@
 
 <body <?php body_class("site"); ?>>
     <header class="site__header">
-        <h1 class="header__titre">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php bloginfo('name'); ?>
-            </a>
-        </h1>
-        <h2 class="header__description"><?php bloginfo('description'); ?></h2>
+        <section class="site__header__titre">
+            <?php the_custom_logo(); ?>
+            <h1 class="header__titre">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <?php bloginfo('name'); ?>
+                </a>
+            </h1>
+            <h2 class="header__description"><?php bloginfo('description'); ?></h2>
+        </section>
         <div class="util">
             <div class="util__menu">
                 <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
