@@ -1,23 +1,37 @@
-.recherche{
-    display: flex;
-    border: 1px solid #aaa;
-    height: 30px;
-    &__text {
-        border:none;
-        outline:none;
-        transition: background-color, .5s;
-        background-color: rgba(#fff,0.1);
-        width: 100%;
-        &:focus{
-            background-color: rgba(#fff,0.3);
-        }
-    }
+// .recherche{
+//     display: flex;
+//     border: 1px solid #aaa;
+//     height: 30px;
+//     &__text {
+//         border:none;
+//         outline:none;
+//         transition: background-color, .5s;
+//         background-color: rgba(#fff,0.1);
+//         width: 100%;
+//         &:focus{
+//             background-color: rgba(#fff,0.3);
+//         }
+//     }
 
-    &__submit {
-        border: none;
-        outline: none;
-        svg{
-            color : #000;
-        }
-    }
+//     &__submit {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         border: none;
+//         outline: none;
+//         svg{
+//             color : #000;
+//         }
+//     }
+    
+// }
+
+.wp-block-search__button {
+background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=search");
+background-repeat: no-repeat ;
+background-position: center;
+margin-left: 0;
+padding: 0 5px 0 5px;
+width: 30px;
+border: none;
 }

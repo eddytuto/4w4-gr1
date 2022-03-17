@@ -41,11 +41,17 @@
 }
 
 @media screen and (min-width : $largeur__media--tablette){
-    #burger {
+    .site #burger {
         display : none;
     }
-    .menu-menu-container{
+    .site .menu-menu-container{
         display : block;
+    }
+    .home #burger {
+        display : block;
+    }
+    .home .menu-menu-container{
+        display : none;
     }
 }
 

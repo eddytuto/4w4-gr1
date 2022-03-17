@@ -505,7 +505,7 @@ html, body {
 }
 
 .site__header {
-  background-color: #373659;
+  background-color: white;
   color: black;
   padding-left: 20px;
   display: flex;
@@ -530,7 +530,10 @@ html, body {
   justify-content: flex-start;
 }
 
-.custom-logo-link,
+.custom-logo-link, .header__titre, .header__description {
+  padding-left: 20px;
+}
+
 .header__titre {
   font-size: clamp(2rem, 4vw, 6rem);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -558,6 +561,7 @@ html, body {
 
 .util__menu {
   display: flex;
+  margin-bottom: 10px;
 }
 
 .util svg {
@@ -614,11 +618,17 @@ html, body {
 }
 
 @media screen and (min-width: 800px) {
-  #burger {
+  .site #burger {
     display: none;
   }
-  .menu-menu-container {
+  .site .menu-menu-container {
     display: block;
+  }
+  .home #burger {
+    display: block;
+  }
+  .home .menu-menu-container {
+    display: none;
   }
 }
 
@@ -684,31 +694,14 @@ html, body {
   text-align: center;
 }
 */
-.recherche {
-  display: flex;
-  border: 1px solid #aaa;
-  height: 30px;
-}
-
-.recherche__text {
+.wp-block-search__button {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=search");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  padding: 0 5px 0 5px;
+  width: 30px;
   border: none;
-  outline: none;
-  transition: background-color, .5s;
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 100%;
-}
-
-.recherche__text:focus {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.recherche__submit {
-  border: none;
-  outline: none;
-}
-
-.recherche__submit svg {
-  color: #000;
 }
 
 .erreur-404 {
@@ -735,9 +728,23 @@ LAYOUT
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.home::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0088cc;
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%, 0 0, 29% 17%);
+  z-index: -1;
+}
+
 .site__header {
   grid-area: header;
-  background-color: #373659;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .site__barre {
@@ -767,6 +774,11 @@ LAYOUT
     grid-template-columns: 300px auto;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "header header" "sidebar main" "footer footer";
+  }
+  .home {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "sidebar" "header" "main" "footer";
   }
 }
 /*# sourceMappingURL=style.css.map */
