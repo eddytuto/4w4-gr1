@@ -1,22 +1,22 @@
 /* ---------------- BACKGROUND */
-$color__background-body : hsl(241, 68%, 61%);
-$color__background-main : hsl(298, 64%, 79%);
-$color__background-cours : hsla(300, 60%, 65%, 0.479);
+$color__background-body : white;
+$color__background-main : white;
+$color__background-cours : white;
 $color__background-header : white;
-$color__background-barre : hsl(242, 24%, 28%);
-$color__background-footer : hsl(17, 8%, 17%);
-$color__background-link : hsl(286, 32%, 65%);
-$color__background-link-hover : hsl(0, 100%, 91%);
-$color__background-404 : hsl(335, 39%, 55%);
-$color__background-body-clip : #0088cc;;
+$color__background-barre : white;
+$color__background-footer : white;
+$color__background-link : white;
+$color__background-link-hover : white;
+$color__background-404 : white;
+$color__background-body-clip : white;
 /* ---------------- LIENS */
-$color__link : hsl(249, 100%, 50%);
-$color__link-hover : hsl(249, 71%, 52%);
-$color__link-visited : hsl(0, 0%, 0%);
+$color__link : black;
+$color__link-hover : grey;
+$color__link-visited : blue;
 /* ---------------- LIENS FOOTER */
-$color__link__footer : hsl(0, 91%, 50%);
-$color__link__footer-hover : hsl(123, 80%, 49%);
-$color__link__footer-visited : hsl(231, 84%, 50%);
+$color__link__footer : black;
+$color__link__footer-hover : grey;
+$color__link__footer-visited : blue;
 
 /* ---------------- LIENS HEADER titre principal du site */
 $color__link__header : hsl(0, 82%, 68%);
@@ -29,9 +29,9 @@ $color__link__animation-visited : hsl(0, 0%, 53%);
 
 /* ---------------- FONT */
 $color__font-header : rgb(0, 0, 0);
-$color__font-main :rgb(68, 57, 54);
-$color__font-barre : rgb(255, 255, 255);
-$color__font-footer : rgb(255, 255, 255);
+$color__font-main :black;
+$color__font-barre : black;
+$color__font-footer : black;
 
 /* ---------------- SVG */
 $color__svg-util: rgb(255, 255, 255);

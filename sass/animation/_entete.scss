@@ -7,7 +7,7 @@
     justify-content: space-around;
 
     li{
-        position:absolute;
+        opacity: 0;
         margin-left: auto;
         margin-right: auto;
         margin-top: auto;
@@ -49,11 +49,36 @@
      }   
 }
 
-@keyframes anim-entete {
+ @keyframes anim-entete {
     0% {
-      position: absolute; 
+      transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
     }
     100% {
-        position: static;
+      transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
     }
-}
+  }
+  @keyframes anim-entete {
+    0% {
+      transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
