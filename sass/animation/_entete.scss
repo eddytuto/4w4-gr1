@@ -1,8 +1,20 @@
-.animation{
-    display : flex;
-    justify-content: space-between;
+.animation__bloc {
+    position: relative;
+    width:100%;
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-    &__bloc{
+    li{
+        position:absolute;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        top:0;
+        left: 0;
+        right: 0;
+        text-align: center;
         display : flex;
         justify-content: center;
         align-items: center;
@@ -12,31 +24,36 @@
         background-color: rgb(17, 97, 247);
         color : #fff;
         font-size: 3rem;
-        transform: translateY(-100vh);  ;
-       //animation : anim-entete 1s forwards;
+        
+       animation : anim-entete 1s forwards;
         &:nth-of-type(1){
+            z-index: 5;
             animation : anim-entete 1s 0s forwards;  
         }
         &:nth-of-type(2){
+            z-index: 4;
             animation : anim-entete 1s .25s forwards; 
         }
         &:nth-of-type(3){
+            z-index: 3;
             animation : anim-entete 1s .5s forwards;  
         }
         &:nth-of-type(4){
+            z-index: 2;
             animation : anim-entete 1s .75s forwards;
         }
         &:nth-of-type(5){
+            z-index: 1;
             animation : anim-entete 1s 1s forwards;
         }
-    }   
+     }   
 }
 
 @keyframes anim-entete {
     0% {
-      transform : translateY(-100vh);  
+      position: absolute; 
     }
     100% {
-        transform : translateY(0);  
+        position: static;
     }
 }

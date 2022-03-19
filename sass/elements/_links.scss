@@ -31,9 +31,14 @@ a {
 					$color__link-hover )
 }
 
- .site__footer a{
+.site__footer a{
 	@include links(	$color__link__footer,
 					$color__link__footer-visited, 
 					$color__link__footer-hover );
+}
+.site__main .animation a{
+	@include links(	$color__link__animation,
+					$color__link__animation-visited, 
+					$color__link__animation-hover );
 }
 

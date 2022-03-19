@@ -8,12 +8,24 @@ Description: un TP conçues avec beaucoup d'amour.
 /* ---------------------------------------------------------
 ANIMATION
 --------------------------------------------------------- */
-.animation {
+.animation__bloc {
+  position: relative;
+  width: 100%;
+  min-height: 25vh;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.animation__bloc {
+.animation__bloc li {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,35 +35,40 @@ ANIMATION
   background-color: #1161f7;
   color: #fff;
   font-size: 3rem;
-  transform: translateY(-100vh);
+  animation: anim-entete 1s forwards;
 }
 
-.animation__bloc:nth-of-type(1) {
+.animation__bloc li:nth-of-type(1) {
+  z-index: 5;
   animation: anim-entete 1s 0s forwards;
 }
 
-.animation__bloc:nth-of-type(2) {
+.animation__bloc li:nth-of-type(2) {
+  z-index: 4;
   animation: anim-entete 1s .25s forwards;
 }
 
-.animation__bloc:nth-of-type(3) {
+.animation__bloc li:nth-of-type(3) {
+  z-index: 3;
   animation: anim-entete 1s .5s forwards;
 }
 
-.animation__bloc:nth-of-type(4) {
+.animation__bloc li:nth-of-type(4) {
+  z-index: 2;
   animation: anim-entete 1s .75s forwards;
 }
 
-.animation__bloc:nth-of-type(5) {
+.animation__bloc li:nth-of-type(5) {
+  z-index: 1;
   animation: anim-entete 1s 1s forwards;
 }
 
 @keyframes anim-entete {
   0% {
-    transform: translateY(-100vh);
+    position: absolute;
   }
   100% {
-    transform: translateY(0);
+    position: static;
   }
 }
 
@@ -432,6 +449,26 @@ a:hover, a:active {
   outline: 0;
 }
 
+.site__main .animation a {
+  color: white;
+}
+
+.site__main .animation a:visited {
+  color: #878787;
+}
+
+.site__main .animation a:hover, .site__main .animation a:focus, .site__main .animation a:active {
+  color: black;
+}
+
+.site__main .animation a:focus {
+  outline: thin dotted;
+}
+
+.site__main .animation a:hover, .site__main .animation a:active {
+  outline: 0;
+}
+
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
@@ -446,6 +483,11 @@ html, body {
   background-color: #e9a7ec;
   border-radius: 5px;
   box-shadow: #39443e 1px -1px 10px;
+}
+
+.site__main {
+  min-height: 50vh;
+  text-align: center;
 }
 
 .formation {

@@ -11,6 +11,11 @@ html,body {
     
 }
 
+.site__main{
+    min-height: 50vh;
+    text-align: center;
+}
+
 .formation {
     display: flex;
     flex-direction: column;
