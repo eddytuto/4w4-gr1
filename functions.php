@@ -53,6 +53,8 @@ function my_register_sidebars() {
         )
     );
 
+    
+
     register_sidebar(
         array(
             'id'            => 'pied_page_colonne_2',
@@ -68,7 +70,7 @@ function my_register_sidebars() {
     register_sidebar(
         array(
             'id'            => 'pied_page_colonne_3',
-            'name'          => __( 'Pied de page colonne 3' ),
+            'name'          => __( 'Pied de page colonne 3'),
             'description'   => __( 'Sidebar s\'affichant dans une colonne du pied de page' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
@@ -92,6 +94,17 @@ function my_register_sidebars() {
         array(
             'id'            => 'pied_page_ligne_2',
             'name'          => __( 'Pied de page ligne 2' ),
+            'description'   => __( 'Sidebar s\'affichant dans une ligne du pied de page' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+    register_sidebar(
+        array(
+            'id'            => 'pied_page_ligne_3',
+            'name'          => __( 'Pied de page ligne 3' ),
             'description'   => __( 'Sidebar s\'affichant dans une ligne du pied de page' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',

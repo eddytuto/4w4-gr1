@@ -1,12 +1,12 @@
 <footer class="site__footer">
 <div class="site__footer__colonne">
-    <section class="footer__adresse">
+    <section class="footer__image">
         <?php get_sidebar( 'pied_page_colonne_1' ); ?>
     </section>
-    <section class="footer__article">
+    <section class="footer__liens">
         <?php get_sidebar( 'pied_page_colonne_2' ); ?>
     </section>
-    <section class="footer__lien">
+    <section class="footer__articles">
         <?php get_sidebar( 'pied_page_colonne_3' ); ?>
     </section>
 </div>
@@ -29,7 +29,10 @@
                     "menu_class"=>"footer__menu__nav__ul",
                     "link_before"=>$icone)); ?>
     </section>
-    <section class="footer__recherche"><?php get_search_form(); ?></section>
+
+
+    <section><?php get_sidebar("pied_page_ligne_3");?></section>
+  
     <section class="footer__auteur">Auteur : Jonathan Mores</section>
 </div>
 </footer>

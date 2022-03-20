@@ -21,7 +21,7 @@
 
 .site__header{
     grid-area: header;  
-    background-color: rgba($color__background-header,0.5);
+    background-color: $color__background-header;
 }
 
 .site__barre{
@@ -48,6 +48,8 @@
 		"main"
 		"footer";
 }
+
+
 
 @media screen and (min-width : $largeur__media--tablette)
 {

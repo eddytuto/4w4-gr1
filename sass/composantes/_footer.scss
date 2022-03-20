@@ -12,22 +12,12 @@
       border : 1px solid #aaa;
       flex : 0 0 30%;
     }
-    .footer__adresse{ // .site__footer__colonne  .footer__adresse
-
-    }
-    .footer__article{}
-    .footer__lien{}
+    
   }
   &__ligne{
     display:flex;
     flex-direction: column;
     align-items: center;
-    section{
-      
-    }
-    .footer__description{}
-    .footer__auteur{}
-    .footer__copyright{}
     .footer__menu{
       &__nav{ // .site__footer__menu
 
@@ -54,9 +44,7 @@
             }    
          }
       }
-
     }
-    .footer__recherche{}
   }
 }
 

@@ -1,10 +1,10 @@
 /* ---------------- BACKGROUND */
-$color__background-body : white;
-$color__background-main : white;
-$color__background-cours : white;
-$color__background-header : white;
+$color__background-body : #6873FA;
+$color__background-main : #6873FA;
+$color__background-cours : #6873FA;
+$color__background-header : #d6daff;
 $color__background-barre : white;
-$color__background-footer : white;
+$color__background-footer : #1f234e;
 $color__background-link : white;
 $color__background-link-hover : white;
 $color__background-404 : white;
@@ -14,9 +14,9 @@ $color__link : black;
 $color__link-hover : grey;
 $color__link-visited : blue;
 /* ---------------- LIENS FOOTER */
-$color__link__footer : black;
-$color__link__footer-hover : grey;
-$color__link__footer-visited : blue;
+$color__link__footer : white;
+$color__link__footer-hover : black;
+$color__link__footer-visited : grey;
 
 /* ---------------- LIENS HEADER titre principal du site */
 $color__link__header : hsl(0, 82%, 68%);
@@ -28,10 +28,10 @@ $color__link__animation-hover : hsl(0, 0%, 0%);
 $color__link__animation-visited : hsl(0, 0%, 53%);
 
 /* ---------------- FONT */
-$color__font-header : rgb(0, 0, 0);
+$color__font-header : black;
 $color__font-main :black;
 $color__font-barre : black;
-$color__font-footer : black;
+$color__font-footer : white;
 
 /* ---------------- SVG */
 $color__svg-util: rgb(255, 255, 255);
