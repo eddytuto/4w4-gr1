@@ -106,6 +106,7 @@ VARIABLES
 /* ---------------- LIENS HEADER titre principal du site */
 /* ---------------- FONT */
 /* ---------------- SVG */
+/* ---------------- Scroll */
 /* ------------------------------------- points de rupture des media queries */
 /* ---------------------------------------------------------
 INITIALISATION
@@ -533,7 +534,7 @@ html, body {
 }
 
 .formation__cours {
-  background-color: #6873FA;
+  background-color: #cdd1ff;
   box-shadow: #394044 1px -1px 10px;
   border-radius: 5px;
   margin: 10px;
@@ -541,6 +542,10 @@ html, body {
   flex-direction: column;
   width: 100%;
   padding: 10px;
+}
+
+.formation__cours:hover {
+  background-color: rgba(205, 209, 255, 0.5);
 }
 
 @media screen and (min-width: 800px) {
@@ -644,6 +649,10 @@ html, body {
   position: absolute;
   transition: transform .3s;
   transform: rotate(0);
+  background-color: navy;
+  border-radius: 20px;
+  margin: 5px;
+  padding-top: 2px;
 }
 
 #chk-burger {
@@ -656,6 +665,7 @@ html, body {
 
 .menu-menu-container {
   display: none;
+  margin-top: 5vh;
 }
 
 #chk-burger:checked ~ .menu-menu-container {
@@ -705,6 +715,15 @@ html, body {
   padding: 15px;
 }
 
+.site__footer .carousel a {
+  background-color: #644A92;
+  border: 2px solid #E9CA34;
+}
+
+.site__footer .carousel a:hover {
+  background-color: #E9CA34;
+}
+
 .site__footer__colonne {
   display: flex;
   justify-content: space-between;
@@ -715,6 +734,13 @@ html, body {
   flex-direction: column;
   border: 1px solid #aaa;
   flex: 0 0 30%;
+  max-height: 20vh;
+}
+
+@media screen and (min-width: 700px) {
+  .site__footer__colonne section {
+    max-height: 50vh;
+  }
 }
 
 .site__footer__ligne {
@@ -747,6 +773,15 @@ html, body {
   color: black;
 }
 
+.footer__image {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__articles, .footer__liens {
+  overflow-y: auto;
+}
+
 /*
 .site__footer {
     font-family: $font__titre;
@@ -768,6 +803,10 @@ html, body {
   padding: 0 5px 0 5px;
   width: 30px;
   border: none;
+}
+
+.recherche {
+  overflow-y: auto;
 }
 
 .erreur-404 {

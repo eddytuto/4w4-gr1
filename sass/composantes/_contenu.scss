@@ -20,6 +20,8 @@ html,body {
     display: flex;
     flex-direction: column;
 
+    
+
     &__titre {
         font-size: 2rem;
         color: $color__font-main;
@@ -32,6 +34,9 @@ html,body {
     }
     &__cours {
         background-color: $color__background-cours;
+        &:hover {
+            background-color: rgba($color__background-cours,0.5);
+        }
         box-shadow: rgb(57, 64, 68) 1px -1px 10px;
         border-radius: 5px;
         margin: 10px;

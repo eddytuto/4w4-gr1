@@ -1,4 +1,14 @@
 .site__footer{
+  
+
+
+  .carousel a{
+      background-color: #644A92;
+      border: 2px solid #E9CA34; 
+  }
+  .carousel a:hover{
+      background-color: #E9CA34;
+  }
   font-family: $font__titre;
   background-color: $color__background-footer;
   color : $color__font-footer;
@@ -11,8 +21,11 @@
       flex-direction: column;
       border : 1px solid #aaa;
       flex : 0 0 30%;
+      max-height: 20vh;
+      @media screen and (min-width : 700px){
+        max-height: 50vh;
+      } 
     }
-    
   }
   &__ligne{
     display:flex;
@@ -34,7 +47,6 @@
                   svg { // .site__footer__menu__ul .menu-item a svg
                     color: $color__link__footer;
                   }
-             
                 &:hover {
                   svg { // .site__footer__menu__ul .menu-item a svg
                     color: $color__link__footer-hover;
@@ -46,6 +58,12 @@
       }
     }
   }
+}
+.footer__image{display: flex; 
+  justify-content: center;}
+.footer__articles, .footer__liens{
+  
+  overflow-y: auto;
 }
 
 

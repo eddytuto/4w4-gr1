@@ -10,7 +10,7 @@
  */
 ?>
 <?php get_header() ?>;
-<main class="site__main">
+<main class="site__main recherche">
     <h1 class="site__main__titre">
         Résultats de la recherche
     </h1>
@@ -28,4 +28,4 @@
     <?php endwhile ?>
     <?php endif ?>
 </main>
-<?php get_footer() ?>;
+<?php get_footer() ?>

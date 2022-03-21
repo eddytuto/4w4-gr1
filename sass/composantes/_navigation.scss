@@ -2,6 +2,11 @@
     position : absolute;
     transition : transform .3s;
     transform : rotate(0);
+    background-color:navy;
+    border-radius: 20px;
+    margin: 5px;
+    padding-top: 2px;
+    
 }
 
 #chk-burger{
@@ -14,6 +19,7 @@
 
 .menu-menu-container {
     display : none;
+    margin-top: 5vh;
 }
 
 #chk-burger:checked ~ .menu-menu-container{
