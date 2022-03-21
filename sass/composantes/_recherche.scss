@@ -38,5 +38,15 @@ border: none;
 
 .recherche{
     overflow-y: auto;
-    
+    &::-webkit-scrollbar {
+
+        height: 1rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $color__scroll-footer;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
 }

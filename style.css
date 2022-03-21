@@ -782,6 +782,19 @@ html, body {
   overflow-y: auto;
 }
 
+.footer__articles::-webkit-scrollbar, .footer__liens::-webkit-scrollbar {
+  height: 1rem;
+}
+
+.footer__articles::-webkit-scrollbar-thumb, .footer__liens::-webkit-scrollbar-thumb {
+  background: #99dee7;
+  border-radius: 10px;
+}
+
+.footer__articles::-webkit-scrollbar-track, .footer__liens::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 /*
 .site__footer {
     font-family: $font__titre;
@@ -807,6 +820,19 @@ html, body {
 
 .recherche {
   overflow-y: auto;
+}
+
+.recherche::-webkit-scrollbar {
+  height: 1rem;
+}
+
+.recherche::-webkit-scrollbar-thumb {
+  background: #99dee7;
+  border-radius: 10px;
+}
+
+.recherche::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .erreur-404 {
