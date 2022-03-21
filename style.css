@@ -495,6 +495,22 @@ a:hover, a:active {
   outline: 0;
 }
 
+.formation__cours {
+  background-color: #cdd1ff;
+}
+
+.formation__cours:hover {
+  background-color: rgba(205, 209, 255, 0.5);
+}
+
+.site__main__recherche {
+  background-color: #cdd1ff;
+}
+
+.site__main__recherche:hover {
+  background-color: rgba(205, 209, 255, 0.5);
+}
+
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
@@ -534,7 +550,6 @@ html, body {
 }
 
 .formation__cours {
-  background-color: #cdd1ff;
   box-shadow: #394044 1px -1px 10px;
   border-radius: 5px;
   margin: 10px;
@@ -542,10 +557,6 @@ html, body {
   flex-direction: column;
   width: 100%;
   padding: 10px;
-}
-
-.formation__cours:hover {
-  background-color: rgba(205, 209, 255, 0.5);
 }
 
 @media screen and (min-width: 800px) {

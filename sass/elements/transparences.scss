@@ -1,0 +1,16 @@
+@mixin transparent(	$couleur )
+{
+    background-color: $couleur;
+    &:hover{
+        background-color: rgba($couleur,0.5);
+    }
+}
+
+.formation__cours{
+    @include transparent($color__background-cours);
+}
+
+.site__main__recherche{
+    @include transparent($color__background-cours);
+}
+
