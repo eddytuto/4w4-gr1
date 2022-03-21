@@ -511,6 +511,14 @@ a:hover, a:active {
   background-color: rgba(205, 209, 255, 0.5);
 }
 
+.cours__contenu {
+  background-color: #cdd1ff;
+}
+
+.cours__contenu:hover {
+  background-color: rgba(205, 209, 255, 0.5);
+}
+
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
@@ -860,6 +868,19 @@ html, body {
 
 .erreur-404 p {
   font-size: 1rem;
+}
+
+.cours {
+  padding: 4rem;
+}
+
+.cours h1 {
+  font-size: 3rem;
+}
+
+.cours__contenu {
+  padding: 4rem;
+  line-height: 150%;
 }
 
 /* ---------------------------------------------------------

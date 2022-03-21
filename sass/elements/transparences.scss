@@ -7,10 +7,13 @@
 }
 
 .formation__cours{
-    @include transparent($color__background-cours);
+    @include transparent($color__background-contenu);
 }
 
 .site__main__recherche{
-    @include transparent($color__background-cours);
+    @include transparent($color__background-contenu);
 }
 
+.cours__contenu{
+    @include transparent($color__background-contenu);
+}

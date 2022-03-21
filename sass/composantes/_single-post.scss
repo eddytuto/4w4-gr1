@@ -1,0 +1,10 @@
+.cours{
+    padding: 4rem;
+    h1{
+        font-size: 3rem;
+    }
+    &__contenu{
+        padding: 4rem;
+        line-height: 150%;
+    }
+}
