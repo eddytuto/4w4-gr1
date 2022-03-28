@@ -101,4 +101,12 @@ function my_register_sidebars() {
 
 add_action( 'widgets_init', 'my_register_sidebars' );
 
+/* ----------------------------------------------------------------- */
+function trouve_la_categorie($tableau){
+    foreach($tableau as $cle){
+        if(is_category($cle)) return($cle);
+    }
+}
+
+
 ?>
