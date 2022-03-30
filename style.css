@@ -18,6 +18,7 @@ VARIABLES
 /* ---------------- LIENS FOOTER */
 /* ---------------- LIENS HEADER titre principal du site */
 /* ---------------- FONT */
+/*  -------------------   Titre */
 /* ------------------------------------- points de rupture des media queries */
 /* ---------------------------------------------------------
 INITIALISATION
@@ -406,6 +407,54 @@ a:hover, a:active {
   outline: 0;
 }
 
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(8, 33, 175, 0.938);
+}
+
+h3, h4 {
+  font-family: "Poppins", sans-serif;
+  color: rgba(61, 86, 139, 0.938);
+}
+
+h5, h6 {
+  font-family: "Roboto", sans-serif;
+  color: rgba(68, 92, 173, 0.938);
+}
+
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #051752;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.2vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 2.6rem);
+}
+
+h4 {
+  font-size: clamp(1.1rem, 2vw, 2.5rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 2vw, 2.2rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
@@ -422,10 +471,8 @@ COMPOSANTES
 }
 
 .formation__titre {
-  font-size: 2rem;
   color: #ebcac1;
   margin: 10px 0px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .formation__liste {
@@ -433,7 +480,37 @@ COMPOSANTES
   flex-wrap: wrap;
 }
 
+.formation__liste .web {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
+}
+
+.formation__liste .jeu {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=games");
+}
+
+.formation__liste .comm {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=users");
+}
+
+.formation__liste .design {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=color_lens");
+}
+
+.formation__liste .utilitaire {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=tools-bold");
+}
+
+.formation__liste .video {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=device-camera-video");
+}
+
+.formation__liste .creation-3d {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
+}
+
 .formation__cours {
+  background-repeat: no-repeat;
+  background-position: 97% 3%;
   background-color: #d1e9ff;
   box-shadow: #394044 1px -1px 10px;
   border-radius: 5px;
@@ -590,6 +667,37 @@ COMPOSANTES
   .home .menu-principal-container {
     display: none;
   }
+}
+
+.menu-accueil-container .menu {
+  display: flex;
+}
+
+.menu-accueil-container .menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 0 15px;
+}
+
+.menu-accueil-container .menu .menu-item a {
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------
+Navigation pour la page category.php   boutons de catégorie  groupe-1
+----------------------------------------------------------------- */
+.menu-categorie_cours-container .menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-categorie_cours-container .menu .menu-item {
+  margin: 0 15px;
+}
+
+.menu-categorie_cours-container .menu .menu-item a {
+  text-decoration: none;
 }
 
 .site__footer {

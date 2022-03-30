@@ -1,0 +1,26 @@
+.menu-accueil-container {
+    // nav
+
+    .menu {
+        //ul
+        display : flex;
+
+        .menu-item {
+            //li
+            display : flex;
+            flex-direction: column;
+            width : 20%;
+            margin: 0 15px;
+
+            a {
+                text-decoration: none;
+                //a
+                .menu-item-description {
+                    // span
+
+                }
+            }
+        }
+
+    }
+}
