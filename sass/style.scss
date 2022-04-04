@@ -1,8 +1,8 @@
 /*
 Theme Name: 2022-4w4 TP#1 Jonathan Mores
 Author: Jonathan Mores
-Theme URI: https://github.com/Hecatius/2022-4w4
-Description: un TP conçues avec beaucoup d'amour.
+Author URI: https://github.com/Hecatius/2022-4w4
+Description: un TP conçues avec beaucoup d'amour https://github.com/Hecatius/2022-4w4.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -30,8 +30,9 @@ INITIALISATION
 /* ---------------------------------------------------------
 ÉLÉMENTS
 --------------------------------------------------------- */
+@import "elements/balises";
 @import "elements/links";
-@import "elements/transparences.scss";
+@import "elements/transparences";
 
 /* ---------------------------------------------------------
 COMPOSANTES
@@ -43,6 +44,7 @@ COMPOSANTES
 @import "composantes/recherche";
 @import "composantes/404";
 @import "composantes/single-post";
+@import "composantes/navigation_categorie_cours";
 
 /* ---------------------------------------------------------
 LAYOUT

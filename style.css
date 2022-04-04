@@ -2,8 +2,8 @@
 /*
 Theme Name: 2022-4w4 TP#1 Jonathan Mores
 Author: Jonathan Mores
-Theme URI: https://github.com/Hecatius/2022-4w4
-Description: un TP conçues avec beaucoup d'amour.
+Author URI: https://github.com/Hecatius/2022-4w4
+Description: un TP conçues avec beaucoup d'amour https://github.com/Hecatius/2022-4w4.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -110,6 +110,7 @@ VARIABLES
 /* ---------------- LIENS FOOTER */
 /* ---------------- LIENS HEADER titre principal du site */
 /* ---------------- FONT */
+/* ---------------- TITRE */
 /* ---------------- SVG */
 /* ---------------- Scroll */
 /* ------------------------------------- points de rupture des media queries */
@@ -440,6 +441,50 @@ html {
 /* ---------------------------------------------------------
 ÉLÉMENTS
 --------------------------------------------------------- */
+h1, h2 {
+  font-family: "Montserrat,sans-serif";
+}
+
+h3, h4 {
+  font-family: "Poppins,sans-serif";
+}
+
+h5, h6 {
+  font-family: "Roboto,sans-serif";
+}
+
+p {
+  font-family: "Trebuchet,sans-serif";
+}
+
+h1 {
+  font-size: clamp(1.75rem, 3vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5em, 2.2vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 2.6rem);
+}
+
+h4 {
+  font-size: clamp(1.1rem, 2vw, 2.2rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
 a {
   color: black;
 }
@@ -541,7 +586,7 @@ html, body {
 }
 
 .site__main {
-  min-height: 50vh;
+  min-height: 75vh;
   text-align: center;
 }
 
@@ -562,8 +607,38 @@ html, body {
   flex-wrap: wrap;
 }
 
+.formation__liste .web {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
+}
+
+.formation__liste .jeu {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=games");
+}
+
+.formation__liste .comm {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=users");
+}
+
+.formation__liste .design {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=color_lens");
+}
+
+.formation__liste .utilitaire {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=tools-bold");
+}
+
+.formation__liste .video {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=device-camera-video");
+}
+
+.formation__liste .creation-3d {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
+}
+
 .formation__cours {
   box-shadow: #394044 1px -1px 10px;
+  background-repeat: no-repeat;
+  background-position: 97% 3%;
   border-radius: 5px;
   margin: 10px;
   display: flex;
@@ -886,6 +961,22 @@ html, body {
 .cours__contenu {
   padding: 4rem;
   line-height: 150%;
+}
+
+/* ----------------------------------------------------------------------------
+Navigation pour la page ctegorie.php bouton de categorie 
+-----------------------------------------------------------------------------*/
+.menu-categorie_cours-container .menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-categorie_cours-container .menu .menu-item {
+  margin: 0 15px;
+}
+
+.menu-categorie_cours-container .menu .menu-item a {
+  text-decoration: none;
 }
 
 /* ---------------------------------------------------------

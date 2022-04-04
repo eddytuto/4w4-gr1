@@ -1,0 +1,16 @@
+/* ----------------------------------------------------------------------------
+Navigation pour la page ctegorie.php bouton de categorie 
+-----------------------------------------------------------------------------*/
+.menu-categorie_cours-container{
+
+    .menu { //nav
+        display: flex;
+        list-style-type: none;
+        .menu-item{ //li
+            margin: 0 15px;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}

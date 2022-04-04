@@ -2,8 +2,10 @@
 
 function cidw_4w4_enqueue(){
     //wp_enqueue_style('style_css', get_stylesheet_uri());
-    wp_enqueue_style('4w4-le-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
-}
+    wp_enqueue_style('cidw-4w4-le-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
+    wp_enqueue_style('cidw-4w4-police-google', "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap",false);
+    
+   }
 
 add_action("wp_enqueue_scripts", "cidw_4w4_enqueue");
 
@@ -13,6 +15,8 @@ function cidw_4w4_register_nav_menu(){
         'menu_principal' => __( 'Menu principal', 'cidw_4w4' ),
         'menu_footer'  => __( 'Menu footer', 'cidw_4w4' ),
         'menu_lien_externe'  => __( 'Menu lien externe', 'cidw_4w4' ),
+        'menu_categorie_cours'  => __( 'Menu cours', 'cidw_4w4' ),
+        'menu_acceuil' => __( 'Menu acceuil', 'cidw_4w4' ),
     ) );
 }
 add_action( 'after_setup_theme', 'cidw_4w4_register_nav_menu', 0 );
@@ -138,5 +142,12 @@ function my_register_sidebars() {
 }
 
 add_action( 'widgets_init', 'my_register_sidebars' );
+
+/* ---------------------------------------------------*/
+function trouve_la_categorie($tableau){
+    foreach($tableau as $cle){
+        if(is_category($cle)) return($cle);
+    }
+}
 
 ?>
