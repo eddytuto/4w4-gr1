@@ -129,6 +129,64 @@ function trouve_la_categorie($tableau){
         if(is_category($cle)) return($cle);
     }
 }
+/* ---------------------------------------------------------------------- */
+/**
+ * @param : WP_Query $query
+ */
+function cidw_4w4_pre_get_posts(WP_Query $query)
+{
+   if (!is_admin() && is_main_query() && is_category(array("cours","web","jeu","creation-3d","utilitaire", "design" )))  {
+        
+    // var_dump($query);
+    //    die();
+    $ordre = get_query_var('ordre');
+    $cle = get_query_var('cletri');
+//echo "----ordre =". $ordre ."----------------<br>";
+//echo "----cle =". $cle ."----------------<br>";
+
+
+    $query->set('posts_per_page', -1);
+    $query->set('orderby', $cle);
+    $query->set('order', $ordre);
+
+   }
+ 
+
+/*
+
+  if (!is_admin() && is_main_query() && is_category(array('web','cours','design','video','utilitaire','creation-3d','jeu'))) 
+    {
+    //$ordre = get_query_var('ordre');
+    $query->set('posts_per_page', -1);
+    // $query->set('orderby', $cle);
+    $query->set('orderby', 'title');
+    // $query->set('order',  $ordre);
+    $query->set('order',  'ASC');
+    // var_dump($query);
+    // die();
+   }
+
+  */ 
+}
+function cidw_4w4_query_vars($params){
+
+
+    $params[] = "cletri";
+    $params[] = "ordre";
+    /*
+    $params["cletri"] = "title";
+    var_dump($params); die();
+    */
+
+
+
+
+    return $params;
+}
+add_action('pre_get_posts', 'cidw_4w4_pre_get_posts');
+/* Le hook «pre_get_posts» nous permet d'alterer les composante de la requête WP_query */
+add_filter('query_vars', 'cidw_4w4_query_vars' );
+/* Le hook «query_vars» nous permet d'alterer les arguments de l'URL */
 
 
 
