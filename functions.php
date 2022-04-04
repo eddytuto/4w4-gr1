@@ -36,6 +36,20 @@ function cidw_4w4_filtre_choix_menu($obj_menu){
     return $obj_menu;
 }
 add_filter("wp_nav_menu_objects","cidw_4w4_filtre_choix_menu");
+
+/* ----------------------------------------------------------- Ajout de la description dans menu */
+function prefix_nav_description( $item_output, $item) {
+    if ( !empty( $item->description ) ) {
+        $item_output = str_replace( '</a>',
+        '<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu-item-icone"></div></a>',
+              $item_output );
+    }
+    return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );
+// l'argument 10 : niveau de privilège
+// l'argument 2 : le nombre d'argument dans la fonction de rappel: «prefix_nav_description»
+
 /* -----------------------------------------------------------   add_theme_support() */
 function cidw_4w4_add_theme_support()
 {
@@ -49,16 +63,7 @@ function cidw_4w4_add_theme_support()
  
 add_action( 'after_setup_theme', 'cidw_4w4_add_theme_support' );
 
-/* ----------------------------------------------------------- Ajout de la description dans menu */
-function prefix_nav_description( $item_output, $item,  $args ) {
-    if ( !empty( $item->description ) ) {
-        $item_output = str_replace( $args->link_after . '</a>',
-        $args->link_after .'<hr><span class="menu-item-description">' . $item->description . '</span>' .  '</a>',
-              $item_output );
-    }
-    return $item_output;
-}
-add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 3 );
+
 
 
 /*---------------------------------------------------------- Enregistrement des sidebar */
