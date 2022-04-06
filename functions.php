@@ -135,6 +135,7 @@ function trouve_la_categorie($tableau){
  */
 function cidw_4w4_pre_get_posts(WP_Query $query)
 {
+    /* On filtre avec une condition permettant de s'assurer qu'on accède à la page de la liste de cours */
    if (!is_admin() && is_main_query() && is_category(array("cours","web","jeu","creation-3d","utilitaire", "design" )))  {
         
     // var_dump($query);
