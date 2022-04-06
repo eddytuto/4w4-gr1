@@ -41,5 +41,7 @@ a {
 	@include links(	$color__link__header,
 					$color__link__header-visited, 
 					$color__link__header-hover );
+
+	font-size: clamp(4rem, 2vw, 9rem);				
 }
 
