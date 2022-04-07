@@ -684,6 +684,18 @@ COMPOSANTES
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
 }
 
+.menu-accueil-container .menu .accueil__prof .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
+}
+
+.menu-accueil-container .menu .accueil__aide .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
+}
+
+.menu-accueil-container .menu .accueil__etudiant .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
+}
+
 .menu-accueil-container .menu .menu-item {
   display: flex;
   flex-direction: column;

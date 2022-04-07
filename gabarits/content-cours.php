@@ -1,6 +1,5 @@
 <?php 
 
-                // get_category_by_slug()
     $categorie = get_the_category();
     // var_dump($categorie);
     // echo $categorie[1]->slug
@@ -10,7 +9,10 @@
     <?php          
     $titre = get_the_title();
     $titreFiltreCours = substr($titre, 7, -6);
-    $nbHeures = substr($titre, -6);
+    //$nbHeures = substr($titre, -6);
+    // on peut utiliser le champ personnalisé « nombre_dheures »
+    $nbHeures = get_field( "nombre_dheures" );
+   //echo $nombre_dheure;
     $sigleCours = substr($titre, 0, 7);
     $descCours = get_the_excerpt();
     ?>

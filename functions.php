@@ -123,7 +123,13 @@ function my_register_sidebars() {
 
 add_action( 'widgets_init', 'my_register_sidebars' );
 
-/* ----------------------------------------------------------------- */
+/**
+ * Retourne le slug de la catégorie  contenu dans le $tableau si cette catégorie représente la catégorie contenu dans l'URL. 
+ * 
+ * @param array $tableau  qui contient l'ensemble des slug de catégorie que l'on veut valider
+ * 
+ * @return string le slug de la catégorie
+ */
 function trouve_la_categorie($tableau){
     foreach($tableau as $cle){
         if(is_category($cle)) return($cle);
@@ -135,6 +141,7 @@ function trouve_la_categorie($tableau){
  */
 function cidw_4w4_pre_get_posts(WP_Query $query)
 {
+    /* On filtre avec une condition permettant de s'assurer qu'on accède à la page de la liste de cours */
    if (!is_admin() && is_main_query() && is_category(array("cours","web","jeu","creation-3d","utilitaire", "design" )))  {
         
     // var_dump($query);
@@ -146,8 +153,14 @@ function cidw_4w4_pre_get_posts(WP_Query $query)
 
 
     $query->set('posts_per_page', -1);
+    /*
     $query->set('orderby', $cle);
     $query->set('order', $ordre);
+    */
+
+    $query->set('orderby', 'meta_value');	
+    $query->set('meta_key', 'nombre_dheures');	 
+    $query->set('order', 'DESC'); 
 
    }
  
