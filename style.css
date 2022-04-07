@@ -454,7 +454,12 @@ h5, h6 {
 }
 
 p {
-  font-family: "Trebuchet,sans-serif";
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+a {
+  font-family: "Roboto,sans-serif";
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 
 h1 {
@@ -575,6 +580,19 @@ COMPOSANTES
 html, body {
   width: 100%;
   height: 100%;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  height: 1rem;
+}
+
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background: #99dee7;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .principal {
@@ -977,6 +995,47 @@ Navigation pour la page ctegorie.php bouton de categorie
 
 .menu-categorie_cours-container .menu .menu-item a {
   text-decoration: none;
+}
+
+.menu-accueil-container .menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-accueil-container .menu .accueil__cours .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
+}
+
+.menu-accueil-container .menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 20%;
+  height: 175px;
+  border: 1px solid #aaa;
+}
+
+.menu-accueil-container .menu .menu-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  font-size: 2rem;
+}
+
+.menu-accueil-container .menu .menu-item a .menu-item-description {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.menu-accueil-container .menu .menu-item a .menu-item-icone {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #aaa;
+  margin-top: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* ---------------------------------------------------------

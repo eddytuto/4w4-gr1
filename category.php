@@ -2,6 +2,16 @@
 <main class="principal">
     <h1>------ category.php groupe-----------</h1>
     <section class="formation">
+<?php
+    //http://127.0.0.1:8080/edsa-Wordpress/category/cours/?cletri=title&ordre=desc
+?>
+<a href="http://127.0.0.1:8080/edsa-Wordpress/category/cours/?cletri=title&ordre=desc">Descendant</a>
+<a href="http://127.0.0.1:8080/edsa-Wordpress/category/cours/?cletri=title&ordre=asc">Ascendant</a>
+
+<a href="?cletri=title&ordre=desc">Descendant</a>
+<a href="?cletri=title&ordre=asc">Ascendant</a>
+
+
     <?php  wp_nav_menu(array(
             "menu"=>"categorie_cours",
             "container" => "nav"));  ?>

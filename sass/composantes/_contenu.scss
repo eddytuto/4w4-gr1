@@ -1,6 +1,17 @@
 html,body {
     width: 100%;
     height: 100%;
+    &::-webkit-scrollbar {
+
+        height: 1rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $color__scroll-footer;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
 }
 .principal {
     margin: 20px;

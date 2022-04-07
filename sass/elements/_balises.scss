@@ -7,9 +7,13 @@ h3,h4{
 h5,h6{
     font-family: $police__h5;
 }
-p{
-    font-family: $police__p;
-}
+p { font-size: clamp(1rem, 1.5vw, 1.5rem);}
+
+a {
+     font-family: $police__h5 ;
+     font-size: clamp(.8rem, 1vw, 1.2rem);
+
+} 
 
 h1{
     font-size: clamp(1.75rem,3vw,3rem);
