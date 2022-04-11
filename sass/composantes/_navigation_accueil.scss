@@ -8,9 +8,17 @@
         .accueil__cours .menu-item-icone{
             background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
         }
-        .accueil__prof{}
-        .accueil__aide{}
-        .accueil__etudiant{}
+        .accueil__prof .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
+        }
+        .accueil__aide .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
+            
+
+        }
+        .accueil__etudiant .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
+        }
         .menu-item {
             //li
             display : flex;
@@ -33,7 +41,6 @@
                     // span`
                     font-size: 1rem;
                     text-align: center;
-
                 }
 
                 .menu-item-icone {

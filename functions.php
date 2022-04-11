@@ -123,64 +123,48 @@ function my_register_sidebars() {
 
 add_action( 'widgets_init', 'my_register_sidebars' );
 
-/* ----------------------------------------------------------------- */
+/**
+ * Retourne le slug de la catégorie  contenu dans le $tableau si cette catégorie représente la catégorie contenu dans l'URL. 
+ * 
+ * @param array $tableau  qui contient l'ensemble des slug de catégorie que l'on veut valider
+ * 
+ * @return string le slug de la catégorie
+ */
 function trouve_la_categorie($tableau){
     foreach($tableau as $cle){
         if(is_category($cle)) return($cle);
     }
 }
-/* ---------------------------------------------------------------------- */
+
+
 /**
- * @param : WP_Query $query
+ * Modifie la requête global de WP_query.
+ * 
+ * @param WP_query $query : Objet contenant la requête global.
+ * @return WP_query $query. 
  */
 function cidw_4w4_pre_get_posts(WP_Query $query)
 {
-   if (!is_admin() && is_main_query() && is_category(array("cours","web","jeu","creation-3d","utilitaire", "design" )))  {
-        
-    // var_dump($query);
-    //    die();
-    $ordre = get_query_var('ordre');
-    $cle = get_query_var('cletri');
-//echo "----ordre =". $ordre ."----------------<br>";
-//echo "----cle =". $cle ."----------------<br>";
-
-
-    $query->set('posts_per_page', -1);
-    $query->set('orderby', $cle);
-    $query->set('order', $ordre);
-
-   }
- 
-
-/*
-
-  if (!is_admin() && is_main_query() && is_category(array('web','cours','design','video','utilitaire','creation-3d','jeu'))) 
+    if (is_admin() || !is_main_query() || !is_category(array('cours','web','jeu','design','utilitaire','creation-3d','video'))   )
     {
-    //$ordre = get_query_var('ordre');
-    $query->set('posts_per_page', -1);
-    // $query->set('orderby', $cle);
-    $query->set('orderby', 'title');
-    // $query->set('order',  $ordre);
-    $query->set('order',  'ASC');
-    // var_dump($query);
-    // die();
-   }
+        return $query;
+    }        
+    else
+    {
+        $ordre = get_query_var('ordre');
+        $cle = get_query_var('cletri');       
+        $query->set('order',  $ordre);
+        $query->set('orderby', $cle);
 
-  */ 
+        $query->set('postperpage','-1');
+        return $query;
+    }
 }
+
+
 function cidw_4w4_query_vars($params){
-
-
     $params[] = "cletri";
     $params[] = "ordre";
-    /*
-    $params["cletri"] = "title";
-    var_dump($params); die();
-    */
-
-
-
-
     return $params;
 }
 add_action('pre_get_posts', 'cidw_4w4_pre_get_posts');
