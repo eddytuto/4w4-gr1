@@ -18,12 +18,20 @@ html,body {
     padding: 10px 15px;
     background-color: $color__background-main;
     border-radius: 5px;
-    box-shadow: rgb(57, 68, 62) 1px -1px 10px;
-    
+    box-shadow: rgb(57, 68, 62) 1px -1px 10px; 
+}
+
+.gallery{
+    box-sizing: border-box;
+    margin:auto;
+    margin-top: 5rem;
+    max-width: 80vw;
+    height: auto;
+    text-align: center;
+    overflow: hidden;
 }
 
 .site__main{
-    min-height: 75vh;
     text-align: center;
 }
 
@@ -103,3 +111,4 @@ html,body {
 .cours__description {
     font-size: 1rem;
 }
+

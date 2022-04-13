@@ -1,6 +1,4 @@
 .site__footer{
-  
-
 
   .carousel a{
       background-color: #644A92;
@@ -13,13 +11,14 @@
   background-color: $color__background-footer;
   color : $color__font-footer;
   padding: 15px;
+
   &__colonne{ // .site__footer__colonne
     display: flex;
     justify-content: space-between;
+    
     section{ // .site__footer__colonne section
       display: flex;
       flex-direction: column;
-      border : 1px solid #aaa;
       flex : 0 0 30%;
       max-height: 20vh;
       @media screen and (min-width : 700px){

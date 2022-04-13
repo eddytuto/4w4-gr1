@@ -24,9 +24,7 @@ ANIMATION
 
 .animation__bloc li {
   opacity: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
+  margin: 5vh 0;
   top: 0;
   left: 0;
   right: 0;
@@ -34,13 +32,16 @@ ANIMATION
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
   background-color: #1161f7;
   color: #fff;
-  font-size: 3rem;
   animation: anim-entete 1s forwards;
+}
+
+.animation__bloc li svg {
+  font-size: 5vw;
 }
 
 .animation__bloc li:nth-of-type(1) {
@@ -66,23 +67,6 @@ ANIMATION
 .animation__bloc li:nth-of-type(5) {
   z-index: 1;
   animation: anim-entete 1s 1s forwards;
-}
-
-@keyframes anim-entete {
-  0% {
-    transform: translateX(-1000px) rotate(-720deg);
-    transform: translateX(-1000px) rotate(-720deg);
-    filter: blur(50px);
-    filter: blur(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    transform: translateX(0) rotate(0deg);
-    filter: blur(0);
-    filter: blur(0);
-    opacity: 1;
-  }
 }
 
 @keyframes anim-entete {
@@ -446,11 +430,11 @@ h1, h2 {
 }
 
 h3, h4 {
-  font-family: "Poppins,sans-serif";
+  font-family: "Montserrat,sans-serif";
 }
 
 h5, h6 {
-  font-family: "Roboto,sans-serif";
+  font-family: "Montserrat,sans-serif";
 }
 
 p {
@@ -458,7 +442,7 @@ p {
 }
 
 a {
-  font-family: "Roboto,sans-serif";
+  font-family: "Trebuchet,sans-serif";
   font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 
@@ -598,13 +582,22 @@ html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
 .principal {
   margin: 20px;
   padding: 10px 15px;
-  background-color: #6873FA;
+  background-color: #4d56b3;
   border-radius: 5px;
   box-shadow: #39443e 1px -1px 10px;
 }
 
+.gallery {
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 5rem;
+  max-width: 80vw;
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
 .site__main {
-  min-height: 75vh;
   text-align: center;
 }
 
@@ -849,7 +842,6 @@ html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
 .site__footer__colonne section {
   display: flex;
   flex-direction: column;
-  border: 1px solid #aaa;
   flex: 0 0 30%;
   max-height: 20vh;
 }
@@ -1000,10 +992,12 @@ Navigation pour la page ctegorie.php bouton de categorie
 .menu-accueil-container .menu {
   display: flex;
   justify-content: space-around;
+  margin-top: 5%;
 }
 
-.menu-accueil-container .menu .accueil__cours .menu-item-icone {
-  background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
+.menu-accueil-container .menu li {
+  border-radius: 5%;
+  background-color: #d6daff;
 }
 
 .menu-accueil-container .menu .menu-item {
@@ -1012,6 +1006,27 @@ Navigation pour la page ctegorie.php bouton de categorie
   flex: 0 0 20%;
   height: 175px;
   border: 1px solid #aaa;
+  opacity: 0;
+}
+
+.menu-accueil-container .menu .menu-item:nth-of-type(1) {
+  z-index: 5;
+  animation: anim-entete 1s 0s forwards;
+}
+
+.menu-accueil-container .menu .menu-item:nth-of-type(2) {
+  z-index: 4;
+  animation: anim-entete 1s .25s forwards;
+}
+
+.menu-accueil-container .menu .menu-item:nth-of-type(3) {
+  z-index: 3;
+  animation: anim-entete 1s .50s forwards;
+}
+
+.menu-accueil-container .menu .menu-item:nth-of-type(4) {
+  z-index: 2;
+  animation: anim-entete 1s .75s forwards;
 }
 
 .menu-accueil-container .menu .menu-item a {
@@ -1038,11 +1053,28 @@ Navigation pour la page ctegorie.php bouton de categorie
   background-size: cover;
 }
 
+@keyframes anim-entete {
+  0% {
+    transform: translateX(-1000px) rotate(-720deg);
+    transform: translateX(-1000px) rotate(-720deg);
+    filter: blur(50px);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
 /* ---------------------------------------------------------
 LAYOUT
 --------------------------------------------------------- */
 .site {
-  background-color: #6873FA;
+  background-color: #4d56b3;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -1067,12 +1099,13 @@ LAYOUT
 
 .site__barre {
   grid-area: sidebar;
-  background-color: white;
+  background-color: #d6daff;
 }
 
 .site__main {
+  height: auto;
   grid-area: main;
-  background-color: #6873FA;
+  background-color: #4d56b3;
 }
 
 .site__footer {

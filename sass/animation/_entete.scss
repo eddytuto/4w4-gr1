@@ -8,9 +8,7 @@
 
     li{
         opacity: 0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
+        margin: 5vh 0;
         top:0;
         left: 0;
         right: 0;
@@ -18,12 +16,15 @@
         display : flex;
         justify-content: center;
         align-items: center;
-        width : 100px;
-        height : 100px;
+        width : 10vw;
+        height : 10vw;
         border-radius: 50%;
         background-color: rgb(17, 97, 247);
         color : #fff;
-        font-size: 3rem;
+        
+        svg{
+                font-size: 5vw;
+        }
         
        animation : anim-entete 1s forwards;
         &:nth-of-type(1){
@@ -50,22 +51,6 @@
 }
 
  @keyframes anim-entete {
-    0% {
-      transform: translateX(-1000px) rotate(-720deg);
-              transform: translateX(-1000px) rotate(-720deg);
-      filter: blur(50px);
-              filter: blur(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0) rotate(0deg);
-              transform: translateX(0) rotate(0deg);
-      filter: blur(0);
-              filter: blur(0);
-      opacity: 1;
-    }
-  }
-  @keyframes anim-entete {
     0% {
       transform: translateX(-1000px) rotate(-720deg);
               transform: translateX(-1000px) rotate(-720deg);
