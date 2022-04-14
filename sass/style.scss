@@ -1,8 +1,8 @@
 /*
-Theme Name: 2022-4w4 TP#1 Jonathan Mores
+Theme Name: 2022-4w4 Exercise 3 Jonathan Mores
 Author: Jonathan Mores
-Author URI: https://github.com/Hecatius/2022-4w4
-Description: un TP conçues avec beaucoup d'amour https://github.com/Hecatius/2022-4w4.
+Author URI: https://github.com/Hecatius/2022-4w4/tree/ex-3
+Description: un TP conçues avec beaucoup d'amour https://github.com/Hecatius/2022-4w4/tree/ex-3.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -12,7 +12,7 @@ Text Domain: cidw-4w4
 /* ---------------------------------------------------------
 ANIMATION
 --------------------------------------------------------- */
-@import "animation/entete";
+@import "animation/anim-front-page";
 
 /* ---------------------------------------------------------
 VARIABLES
@@ -46,6 +46,7 @@ COMPOSANTES
 @import "composantes/single-post";
 @import "composantes/navigation_categorie_cours";
 @import "composantes/navigation_accueil";
+
 
 
 /* ---------------------------------------------------------

@@ -17,6 +17,7 @@ function cidw_4w4_register_nav_menu(){
         'menu_lien_externe'  => __( 'Menu lien externe', 'cidw_4w4' ),
         'menu_categorie_cours'  => __( 'Menu cours', 'cidw_4w4' ),
         'menu_accueil' => __( 'Menu accueil', 'cidw_4w4' ),
+        'menu_evenement' => __( 'Menu evenement', 'cidw_4w4' ),
     ) );
 }
 add_action( 'after_setup_theme', 'cidw_4w4_register_nav_menu', 0 );
@@ -173,33 +174,22 @@ function trouve_la_categorie($tableau){
  */
 function cidw_4w4_pre_get_posts(WP_Query $query)
 {
-    /*on filtre avec une condition permettant de s'assurer qu'on accede a la page de laliste de cours*/
-   if (!is_admin() && is_main_query() && is_category(array("cours","web","jeu","creation-3d","utilitaire", "design" )))  {
-        
-    // var_dump($query);
-    //    die();
-    $ordre = get_query_var('ordre');
-    $cle = get_query_var('cletri');
-//echo "----ordre =". $ordre ."----------------<br>";
-//echo "----cle =". $cle ."----------------<br>";
-    $query->set('posts_per_page', -1);
-    $query->set('orderby', $cle);
-    $query->set('order', $ordre);
-   }
-
-/*
-  if (!is_admin() && is_main_query() && is_category(array('web','cours','design','video','utilitaire','creation-3d','jeu'))) 
+    if (is_admin() 
+        || !is_main_query() 
+        || !is_category(array('cours','web','jeu','design','utilitaire','creation-3d','video'))   )
     {
-    //$ordre = get_query_var('ordre');
-    $query->set('posts_per_page', -1);
-    // $query->set('orderby', $cle);
-    $query->set('orderby', 'title');
-    // $query->set('order',  $ordre);
-    $query->set('order',  'ASC');
-    // var_dump($query);
-    // die();
-   }
-  */ 
+        return $query;
+    }        
+    else
+    {
+        $ordre = get_query_var('ordre');
+        $cle = get_query_var('cletri');       
+        $query->set('order',  $ordre);
+        $query->set('orderby', $cle);
+
+        $query->set('postperpage','-1');
+        return $query;
+    }
 }
 function cidw_4w4_query_vars($params){
     $params[] = "cletri";
@@ -214,8 +204,4 @@ add_action('pre_get_posts', 'cidw_4w4_pre_get_posts');
 /* Le hook «pre_get_posts» nous permet d'alterer les composante de la requête WP_query */
 add_filter('query_vars', 'cidw_4w4_query_vars' );
 /* Le hook «query_vars» nous permet d'alterer les arguments de l'URL */
-
-
-
-
 ?>

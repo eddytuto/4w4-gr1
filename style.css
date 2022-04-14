@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*
-Theme Name: 2022-4w4 TP#1 Jonathan Mores
+Theme Name: 2022-4w4 Exercise 3 Jonathan Mores
 Author: Jonathan Mores
-Author URI: https://github.com/Hecatius/2022-4w4
-Description: un TP conçues avec beaucoup d'amour https://github.com/Hecatius/2022-4w4.
+Author URI: https://github.com/Hecatius/2022-4w4/tree/ex-3
+Description: un TP conçues avec beaucoup d'amour https://github.com/Hecatius/2022-4w4/tree/ex-3.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -13,73 +13,37 @@ Text Domain: cidw-4w4
 /* ---------------------------------------------------------
 ANIMATION
 --------------------------------------------------------- */
-.animation__bloc {
-  position: relative;
-  width: 100%;
-  min-height: 25vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.animation__bloc li {
-  opacity: 0;
-  margin: 5vh 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10vw;
-  height: 10vw;
-  border-radius: 50%;
-  background-color: #1161f7;
-  color: #fff;
-  animation: anim-entete 1s forwards;
-}
-
-.animation__bloc li svg {
-  font-size: 5vw;
-}
-
-.animation__bloc li:nth-of-type(1) {
+.menu-accueil-container .menu .menu-item:nth-of-type(1), .menu-evenement-container .menu .menu-item:nth-of-type(1) {
   z-index: 5;
   animation: anim-entete 1s 0s forwards;
 }
 
-.animation__bloc li:nth-of-type(2) {
+.menu-accueil-container .menu .menu-item:nth-of-type(2), .menu-evenement-container .menu .menu-item:nth-of-type(2) {
   z-index: 4;
   animation: anim-entete 1s .25s forwards;
 }
 
-.animation__bloc li:nth-of-type(3) {
+.menu-accueil-container .menu .menu-item:nth-of-type(3), .menu-evenement-container .menu .menu-item:nth-of-type(3) {
   z-index: 3;
-  animation: anim-entete 1s .5s forwards;
+  animation: anim-entete 1s .50s forwards;
 }
 
-.animation__bloc li:nth-of-type(4) {
+.menu-accueil-container .menu .menu-item:nth-of-type(4), .menu-evenement-container .menu .menu-item:nth-of-type(4) {
   z-index: 2;
   animation: anim-entete 1s .75s forwards;
 }
 
-.animation__bloc li:nth-of-type(5) {
-  z-index: 1;
-  animation: anim-entete 1s 1s forwards;
-}
-
 @keyframes anim-entete {
   0% {
-    transform: translateX(-1000px) rotate(-720deg);
-    transform: translateX(-1000px) rotate(-720deg);
+    transform: translateX(-1000px);
+    transform: translateX(-1000px);
     filter: blur(50px);
     filter: blur(50px);
     opacity: 0;
   }
   100% {
-    transform: translateX(0) rotate(0deg);
-    transform: translateX(0) rotate(0deg);
+    transform: translateX(0);
+    transform: translateX(0);
     filter: blur(0);
     filter: blur(0);
     opacity: 1;
@@ -989,47 +953,61 @@ Navigation pour la page ctegorie.php bouton de categorie
   text-decoration: none;
 }
 
-.menu-accueil-container .menu {
+.menu-accueil-container .menu, .menu-evenement-container .menu {
   display: flex;
   justify-content: space-around;
   margin-top: 5%;
 }
 
-.menu-accueil-container .menu li {
+.menu-accueil-container .menu li, .menu-evenement-container .menu li {
   border-radius: 5%;
   background-color: #d6daff;
 }
 
-.menu-accueil-container .menu .menu-item {
+.menu-accueil-container .menu .accueil__cours .menu-item-icone, .menu-evenement-container .menu .accueil__cours .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+}
+
+.menu-accueil-container .menu .accueil__profs .menu-item-icone, .menu-evenement-container .menu .accueil__profs .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+}
+
+.menu-accueil-container .menu .accueil__nouveaux .menu-item-icone, .menu-evenement-container .menu .accueil__nouveaux .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+}
+
+.menu-accueil-container .menu .accueil__aide .menu-item-icone, .menu-evenement-container .menu .accueil__aide .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+}
+
+.menu-accueil-container .menu .accueil__porte__1 .menu-item-icone, .menu-evenement-container .menu .accueil__porte__1 .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+}
+
+.menu-accueil-container .menu .accueil__porte__2 .menu-item-icone, .menu-evenement-container .menu .accueil__porte__2 .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+}
+
+.menu-accueil-container .menu .accueil__journee .menu-item-icone, .menu-evenement-container .menu .accueil__journee .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+}
+
+.menu-accueil-container .menu .accueil__projet .menu-item-icone, .menu-evenement-container .menu .accueil__projet .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+}
+
+.menu-accueil-container .menu .menu-item, .menu-evenement-container .menu .menu-item {
   display: flex;
   flex-direction: column;
   flex: 0 0 20%;
-  height: 175px;
+  width: 20vw;
+  min-height: 100px;
+  max-height: 300px;
   border: 1px solid #aaa;
   opacity: 0;
 }
 
-.menu-accueil-container .menu .menu-item:nth-of-type(1) {
-  z-index: 5;
-  animation: anim-entete 1s 0s forwards;
-}
-
-.menu-accueil-container .menu .menu-item:nth-of-type(2) {
-  z-index: 4;
-  animation: anim-entete 1s .25s forwards;
-}
-
-.menu-accueil-container .menu .menu-item:nth-of-type(3) {
-  z-index: 3;
-  animation: anim-entete 1s .50s forwards;
-}
-
-.menu-accueil-container .menu .menu-item:nth-of-type(4) {
-  z-index: 2;
-  animation: anim-entete 1s .75s forwards;
-}
-
-.menu-accueil-container .menu .menu-item a {
+.menu-accueil-container .menu .menu-item a, .menu-evenement-container .menu .menu-item a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1038,12 +1016,12 @@ Navigation pour la page ctegorie.php bouton de categorie
   font-size: 2rem;
 }
 
-.menu-accueil-container .menu .menu-item a .menu-item-description {
+.menu-accueil-container .menu .menu-item a .menu-item-description, .menu-evenement-container .menu .menu-item a .menu-item-description {
   font-size: 1rem;
   text-align: center;
 }
 
-.menu-accueil-container .menu .menu-item a .menu-item-icone {
+.menu-accueil-container .menu .menu-item a .menu-item-icone, .menu-evenement-container .menu .menu-item a .menu-item-icone {
   width: 2rem;
   height: 2rem;
   border: 1px solid #aaa;
@@ -1051,23 +1029,6 @@ Navigation pour la page ctegorie.php bouton de categorie
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-@keyframes anim-entete {
-  0% {
-    transform: translateX(-1000px) rotate(-720deg);
-    transform: translateX(-1000px) rotate(-720deg);
-    filter: blur(50px);
-    filter: blur(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    transform: translateX(0) rotate(0deg);
-    filter: blur(0);
-    filter: blur(0);
-    opacity: 1;
-  }
 }
 
 /* ---------------------------------------------------------

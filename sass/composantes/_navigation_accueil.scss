@@ -1,6 +1,5 @@
-.menu-accueil-container {
+.menu-accueil-container, .menu-evenement-container {
     // nav
-
     .menu {
         //ul
         display : flex;
@@ -9,45 +8,44 @@
         li{
             border-radius: 5%;
             background-color: $color__background-header;
-            
         }
-        .accueil__cours {
+        .accueil__cours .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
         }
-        .accueil__prof{
+        .accueil__profs .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
         }
-        .accueil__aide{
+        .accueil__nouveaux .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
         }
-        .accueil__etudiant{
+        .accueil__aide .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+        }
+        .accueil__porte__1 .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+        }
+        .accueil__porte__2 .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+        }
+        .accueil__journee .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
+        }
+        .accueil__projet .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=academic-cap");
         }
         .menu-item {
             //li
             display : flex;
             flex-direction: column;
             flex : 0 0 20%;
-            height : 175px;
+            width: 20vw;
+            min-height: 100px;
+            max-height: 300px;
             border : 1px solid #aaa;
             opacity: 0;
-            &:nth-of-type(1){
-                z-index: 5;
-                animation : anim-entete 1s 0s forwards; 
-            }
-            &:nth-of-type(2){
-                z-index: 4;
-                animation : anim-entete 1s .25s forwards; 
-            }
-            &:nth-of-type(3){
-                z-index: 3;
-                animation : anim-entete 1s .50s forwards; 
-            }
-            &:nth-of-type(4){
-                z-index: 2;
-                animation : anim-entete 1s .75s forwards; 
-            }
-            
-            
-         
+           
 
-            a {
+            a {//a
                 display : flex;
                 flex-direction: column;
                 align-items: center;
@@ -55,15 +53,12 @@
                 height : 100%;
                 font-size: 2rem;
                 
-                //a
-                .menu-item-description {
-                    // span`
+                .menu-item-description {// span
                     font-size: 1rem;
                     text-align: center;
                 }
 
                 .menu-item-icone {
-                    
                     width : 2rem;
                     height : 2rem;
                     border : 1px solid #aaa;
@@ -74,23 +69,6 @@
                 }
             }
         }
-
     }
 } 
-
-@keyframes anim-entete {
-    0% {
-      transform: translateX(-1000px) rotate(-720deg);
-              transform: translateX(-1000px) rotate(-720deg);
-      filter: blur(50px);
-              filter: blur(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0) rotate(0deg);
-              transform: translateX(0) rotate(0deg);
-      filter: blur(0);
-              filter: blur(0);
-      opacity: 1;
-    }
-  }// .menu-accueil-container
+// .menu-accueil-container
