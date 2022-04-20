@@ -22,6 +22,11 @@
     <section class="footer__auteur">Auteur : Eddy Martin</section>
 </div>
 </footer>
-<?php wp_footer() ?>
+<div class="boite__modale">
+    <p class="boite__modale__text">
+        Ceci est un test pour vérifier le fonctionnement de la boîte modale
+    </p>
+</div>
+<?php wp_footer(); ?>
 </body>
 </html>

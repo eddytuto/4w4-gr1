@@ -705,11 +705,11 @@ COMPOSANTES
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
 }
 
-.menu-accueil-container .menu .accueil__projet .menu-item-icone, .menu-evenement-container .menu .accueil__projet .menu-item-icone {
+.menu-accueil-container .menu .accueil__porte__2 .menu-item-icone, .menu-evenement-container .menu .accueil__porte__2 .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
 }
 
-.menu-accueil-container .menu .accueil__porte__2 .menu-item-icone, .menu-evenement-container .menu .accueil__porte__2 .menu-item-icone {
+.menu-accueil-container .menu .accueil__projet .menu-item-icone, .menu-evenement-container .menu .accueil__projet .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
 }
 
@@ -888,6 +888,29 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
 
 .cours section {
   display: flex;
+}
+
+.evenement {
+  background-color: #3048d2;
+}
+
+.evenement__resume {
+  background-color: #bbb;
+}
+
+.evenement__organisateur {
+  background-color: #9fa2d2;
+}
+
+/* Le parent de la boite__modale est la balise «body»  */
+.boite__modale {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  border: 5px solid #aaa;
+  background-color: #f00;
 }
 
 /* ---------------------------------------------------------

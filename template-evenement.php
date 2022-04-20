@@ -19,6 +19,11 @@ get_header();
      <p><?php the_field('organisateur'); ?></p>
      <p><?php the_field('date'); ?></p>
      <p><?php the_field('heure'); ?></p>
+     <?php 
+     $image = get_field('image');
+     if( !empty( $image ) ): ?>
+          <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+     <?php endif; ?>
      <?php endif ?>
      </section>
 </main>

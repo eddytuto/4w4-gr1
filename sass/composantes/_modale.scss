@@ -1,0 +1,11 @@
+
+/* Le parent de la boite__modale est la balise «body»  */
+.boite__modale {
+    position : absolute;
+    width : 50%;
+    height : 50%;
+    top:25%;
+    left:25%;
+    border: 5px solid #aaa;
+    background-color: #f00;
+}
