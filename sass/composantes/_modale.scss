@@ -8,4 +8,13 @@
     left:25%;
     border: 5px solid #aaa;
     background-color: #f00;
+    transform : scale(.1);
+    transition : all 1s ease-in-out;
+
+    &:hover {
+        transform : scale(1)
+    }
 }
+
+
+

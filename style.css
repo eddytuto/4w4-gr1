@@ -911,6 +911,12 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   left: 25%;
   border: 5px solid #aaa;
   background-color: #f00;
+  transform: scale(0.1);
+  transition: all 1s ease-in-out;
+}
+
+.boite__modale:hover {
+  transform: scale(1);
 }
 
 /* ---------------------------------------------------------
