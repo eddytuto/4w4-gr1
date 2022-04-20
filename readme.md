@@ -1,12 +1,8 @@
-# Exrcice #1 - 4W4 - Conception d'interface et développement Web
-### Auteur : Eddy Martin
-### Date de remise : 11 février 2022
+# Exrcice #3 - 4W4 - Conception d'interface et développement Web
+### Auteur : Jonathan Mores
+### Date de remise : 12 avril 2022
 
 ```
-Cet exercice nous a permis d'introduire la structure d'un thème Wordpress. Voici la structure utilisée:
--Pour le style css nous avons utilisé Sass
--Les fonctions du thème se trouvent dans «functions.php»
--Les modèle principal est : «index.php»
-
+Cet exercice nous a permit d'apprendre les custom fields, à maitriser les menus et l'introduction aux templates :)
 Pour modifier readme.md
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
