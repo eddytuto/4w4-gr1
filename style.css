@@ -904,18 +904,18 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
 
 /* Le parent de la boite__modale est la balise «body»  */
 .boite__modale {
-  position: absolute;
+  position: fixed;
   width: 50%;
   height: 50%;
   top: 25%;
   left: 25%;
   border: 5px solid #aaa;
   background-color: #f00;
-  transform: scale(0.1);
+  transform: scale(0);
   transition: all 1s ease-in-out;
 }
 
-.boite__modale:hover {
+.boite__modale--ouvrir {
   transform: scale(1);
 }
 
