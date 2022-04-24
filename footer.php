@@ -37,6 +37,7 @@
 </div>
 </footer>
 <div class="boite__modale">
+    <button class="boite__modale__bouton">x</button>
     <p class="boite__modale__texte">
         Ceci est un test pour vérifier le fonctionnement de la boite modale
     </p>

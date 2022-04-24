@@ -1049,6 +1049,17 @@ Navigation pour la page ctegorie.php bouton de categorie
   transform: scale(1);
 }
 
+.boite__modale__bouton {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+}
+
+.boite__modale__bouton:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
 /* ---------------------------------------------------------
 LAYOUT
 --------------------------------------------------------- */

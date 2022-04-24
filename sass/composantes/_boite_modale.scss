@@ -12,5 +12,15 @@
     z-index: 300;
     &--ouvrir{
         transform: scale(1);
+        
+    }
+    &__bouton{
+        position: absolute;
+        right:0; 
+        background-color: transparent;
+        &:hover{
+            background-color: white;
+            cursor: pointer;
+        }
     }
 }
