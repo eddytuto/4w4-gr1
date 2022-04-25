@@ -546,6 +546,10 @@ COMPOSANTES
   margin: 5px 0px;
 }
 
+.cours__invisible {
+  display: none;
+}
+
 .cours__sigle {
   font-size: 1.2rem;
   color: #8a5353;
