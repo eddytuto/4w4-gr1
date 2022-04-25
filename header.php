@@ -14,7 +14,7 @@
     
 </head>
 
-<body <?php body_class("site"); ?>>
+<body <?php body_class("site"); ?> >
     <header class="site__header">
         <div class="site__header__titre">
             <?php echo get_custom_logo();  ?>

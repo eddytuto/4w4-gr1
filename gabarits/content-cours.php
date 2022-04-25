@@ -11,6 +11,7 @@
         $descCours = get_the_excerpt();
         $descCoursComplet = get_the_content();
         ?>
+        <code class='formation__cours__invisible'><?= $descCoursComplet ?></code>
         <?php the_post_thumbnail("thumbnail"); ?>
         <h3 class="cours__titre">
             <a href="<?php echo get_permalink(); ?>">

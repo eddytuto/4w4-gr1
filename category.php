@@ -36,7 +36,7 @@
 
 
         ?>
-        <div class="formation__liste">
+        <div class="formation__liste" style="background-color:<?= get_theme_mod('background_formation__liste') ?>">
             <?php if (have_posts()):
                 while (have_posts()): the_post(); ?>
                 <?php get_template_part( "gabarits/content", "cours"); ?>

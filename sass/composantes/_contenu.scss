@@ -87,6 +87,9 @@ html,body {
         display: flex;
         flex-direction: column;
         width: 100%;
+        &__invisible{
+            display: none;
+        }
         @media screen and (min-width : $largeur__media--tablette){
             width: 45%;
         }

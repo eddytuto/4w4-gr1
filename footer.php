@@ -36,11 +36,9 @@
     <section class="footer__auteur">Auteur : Jonathan Mores</section>
 </div>
 </footer>
-<div class="boite__modale">
+<div class="boite__modale" style="background-color:<?= get_theme_mod('background_boite__modale') ?>">
     <button class="boite__modale__bouton">x</button>
-    <p class="boite__modale__texte">
-        Ceci est un test pour vérifier le fonctionnement de la boite modale
-    </p>
+    <p class="boite__modale__texte">a</p>
 </div>
 <?php wp_footer() ?>
 </body>
