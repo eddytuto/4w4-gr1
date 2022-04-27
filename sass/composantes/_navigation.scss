@@ -1,19 +1,5 @@
-#burger {
-    position : absolute;
-    transition : transform .3s;
-    transform : rotate(0);
-    background-color:navy;
-    border-radius: 20px;
-    margin: 5px;
-    padding-top: 2px;
-}
-
 #chk-burger{
     display: none;
-}
-
-#chk-burger:checked ~ #burger {
-    transform : rotate(90deg);
 }
 
 .menu-menu-container {
