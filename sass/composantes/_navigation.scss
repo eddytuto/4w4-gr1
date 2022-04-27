@@ -2,7 +2,7 @@
 #burger {
     position : absolute;
     transition : transform .3s;
-    transform : rotate(0);
+   // transform : rotate(0);
 }
 
 #chk-burger {
@@ -10,7 +10,7 @@
 }
 
 #chk-burger:checked ~ #burger {
-    transform : rotate(90deg);
+   // transform : rotate(90deg);
 }
 .menu-principal-container {
     display : none;
