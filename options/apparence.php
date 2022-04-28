@@ -46,6 +46,19 @@
                  "setting"=>"background_boite__modale",
                  "label"=>"Couleur du background de la boite modale"
                 ]);
+
+         $manager->add_section('modifier_background_clip_path',[
+                  "title"=>"Modifier le background du clip path"
+               ]);
+         $manager->add_setting('background_clip_path',[
+                  "default"=>"#fffff",
+                  "sanitize_callback"=>"sanitize_hex_color"
+                  ]);
+           $manager->add_control('background_clip_path',[
+                  "section"=>"modifier_background_clip_path",
+                  "setting"=>"background_clip_path",
+                  "label"=>"Couleur du background du clip path"
+                  ]);
 /*
 Pour utiliser une interface de couleur plus complexe on peut utiliser 
 *     La méthode add_control (new WP_Customize_Color_Control($manager, le nom de la variable php,
@@ -61,6 +74,11 @@ Pour utiliser une interface de couleur plus complexe on peut utiliser
         "section"=>"modifier_background_boite__modale",
         "label"=>"Couleurdu background de la boite modale"
      ]));
+
+     $manager->add_control(new WP_Customize_Color_Control($manager,'background_clip_path',[
+      "section"=>"modifier_background_clip_path",
+      "label"=>"Couleurdu background du clip path"
+   ]));
 });
 
      

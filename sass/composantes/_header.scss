@@ -2,6 +2,7 @@
   background-color: $color__background-header;
   color: $color__font-header;
   padding-left: 20px;
+  z-index: 2;
   display : flex;
   align-items: flex-start;
   flex-direction: column;

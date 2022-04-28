@@ -600,6 +600,10 @@ html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
   box-shadow: #39443e 1px -1px 10px;
 }
 
+img {
+  z-index: 2;
+}
+
 .gallery {
   box-sizing: border-box;
   margin: auto;
@@ -707,6 +711,7 @@ html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
   background-color: #d6daff;
   color: black;
   padding-left: 20px;
+  z-index: 2;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -822,6 +827,7 @@ html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
 }
 
 .site__footer {
+  z-index: 3;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #1f234e;
   color: white;
@@ -1107,18 +1113,16 @@ LAYOUT
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.site__main::after {
+.home::after {
   content: "";
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  width: 100vw;
+  height: 250vh;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   clip-path: polygon(83% 0, 100% 0, 100% 100%, 63% 100%);
-  background-color: rgba(255, 255, 255, 0.356);
-  z-index: 10;
 }
 
 .site__header {
@@ -1146,6 +1150,10 @@ LAYOUT
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "sidebar" "header" "main" "footer";
+}
+
+.home {
+  height: 200vh;
 }
 
 @media screen and (min-width: 800px) {
