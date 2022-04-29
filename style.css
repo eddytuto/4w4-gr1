@@ -620,7 +620,6 @@ COMPOSANTES
 
 #burger {
   position: absolute;
-  transition: transform .3s;
 }
 
 #chk-burger {
@@ -970,11 +969,14 @@ ANIMATION
 
 .burger {
   position: relative;
+  margin: 5px;
+  padding: 10px;
   width: 2rem;
   height: 2rem;
   background-color: transparent;
-  border-radius: 100%;
+  border-radius: 25%;
   overflow: hidden;
+  border: 1px solid #aaa;
   /*
     &:hover{
 
@@ -1001,7 +1003,7 @@ ANIMATION
   height: 100%;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #272e33;
   transition: all .25s ease-in-out;
 }
 
