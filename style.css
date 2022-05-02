@@ -917,6 +917,24 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   transform: scale(1);
 }
 
+.boite__modale__texte {
+  overflow: hidden;
+}
+
+.galerie {
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .galerie {
+    width: 75%;
+  }
+}
+
+.home .site__main {
+  align-items: center;
+}
+
 /* ---------------------------------------------------------
 ANIMATION
 --------------------------------------------------------- */
@@ -987,7 +1005,7 @@ ANIMATION
             clip-path : polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
         }
     }
-    */
+*/
 }
 
 .burger .burger__ligne {
@@ -1012,18 +1030,33 @@ ANIMATION
   clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
 }
 
-#chk-burger:checked ~ .burger .burger__ligne:nth-of-type(1) {
+#chk-burger:checked ~ #burger .burger__ligne:nth-of-type(1) {
   clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
 }
 
-#chk-burger:checked ~ .burger .burger__ligne:nth-of-type(2) {
+#chk-burger:checked ~ #burger .burger__ligne:nth-of-type(2) {
   clip-path: polygon(40% 40%, 60% 40%, 60% 60%, 40% 60%);
 }
 
-#chk-burger:checked ~ .burger .burger__ligne:nth-of-type(3) {
+#chk-burger:checked ~ #burger .burger__ligne:nth-of-type(3) {
   clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
 }
 
+/*
+#chk-burger:checked ~ .burger {
+
+        .burger__ligne:nth-of-type(1){
+            clip-path : polygon(7.1% -7.1% , 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%  );
+        }
+        .burger__ligne:nth-of-type(2){
+            clip-path : polygon(40% 40% , 60% 40%, 60% 60% , 40% 60%);
+        }
+        .burger__ligne:nth-of-type(3){
+            clip-path : polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
+        }
+}
+
+*/
 /* ---------------------------------------------------------
 LAYOUT
 --------------------------------------------------------- */
@@ -1044,6 +1077,7 @@ LAYOUT
   clip-path: polygon(83% 0, 100% 0, 100% 100%, 63% 100%);
   background-color: #0b266a;
   z-index: -1;
+  height: 150vh;
 }
 
 .site__header {
@@ -1060,6 +1094,8 @@ LAYOUT
   grid-area: main;
   background-color: rgba(213, 230, 241, 0.5);
   padding: 10px 15px 10px 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .site__footer {

@@ -16,6 +16,7 @@
     clip-path: polygon(83% 0, 100% 0, 100% 100%, 63% 100%);
     background-color:$color__background-body-clip ;
     z-index : -1;
+    height : 150vh;
 }
 
 
@@ -34,6 +35,8 @@
     grid-area: main;
     background-color: rgba($color__background-main,.5);
     padding: 10px 15px 10px 15px;
+    display : flex;
+    flex-direction : column;
 }
 
 .site__footer{

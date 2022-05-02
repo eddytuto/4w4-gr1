@@ -17,12 +17,17 @@
     <style>
         /* À compléter pour récupérer la nouvelle couleur du clipPath */
         .home::after {
-            /* background-color :  */
+             background-color : <?=  get_theme_mod('background_body_clippath');?>
         }
+
+        .site {
+            background-color:<?=  get_theme_mod('background_body');?>;
+        }
+
     </style>    
 </head>
 
-<body <?php body_class("site"); ?> style="background-color:<?=  get_theme_mod('background_body');?>;" >
+<body <?php body_class("site"); ?> >
 
     <header class="site__header">
         <section class="site__header__titre">

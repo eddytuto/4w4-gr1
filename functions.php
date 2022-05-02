@@ -4,13 +4,33 @@ require_once("options/apparence.php");
 
 function cidw_4w4_enqueue(){
     //wp_enqueue_style('style_css', get_stylesheet_uri());
-    wp_enqueue_style('cidw-4w4-le-style', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
-    wp_enqueue_style('cidw-4w4-police-google',"https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;400;500&family=Roboto&display=swap");
-    wp_enqueue_script('cidw-4w4-boite-modale', 
-                        get_template_directory_uri() . '/javascript/boite-modale.js',
+    wp_enqueue_style('cidw-4w4-le-style', 
+                        get_template_directory_uri() . '/style.css', 
+                        array(), 
+                        filemtime(get_template_directory() . '/style.css'), 
+                        false);
+
+    wp_enqueue_style('cidw-4w4-police-google',
+                    "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;400;500&family=Roboto&display=swap");
+
+    wp_register_script('cidw-4w4-boite-modale', 
+                    get_template_directory_uri() . '/javascript/boite-modale.js',
+                    array(),
+                    filemtime(get_template_directory() . '/javascript/boite-modale.js'),
+                    true);                
+
+    wp_register_script('cidw-4w4-caroussel', 
+                        get_template_directory_uri() . '/javascript/caroussel.js',
                         array(),
-                        filemtime(get_template_directory() . '/javascript/boite-modale.js'),
-                        true);
+                        filemtime(get_template_directory() . '/javascript/caroussel.js'),
+                        true);   
+
+    if (is_category('cours')){
+    wp_enqueue_script('cidw-4w4-boite-modale');                   
+    }
+    if (is_front_page()){
+    wp_enqueue_script('cidw-4w4-caroussel');   
+    }                                    
 }
 
 add_action("wp_enqueue_scripts", "cidw_4w4_enqueue");
