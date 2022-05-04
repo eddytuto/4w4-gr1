@@ -38,7 +38,12 @@
 </footer>
 <div class="boite__modale" style="background-color:<?= get_theme_mod('background_boite__modale') ?>">
     <button class="boite__modale__bouton">x</button>
-    <p class="boite__modale__texte">a</p>
+    <article class="boite__modale__texte"></article>
+</div>
+<div class="boite__carrousel" style="background-color:<?= get_theme_mod('background_boite__modale') ?>">
+    <button class="boite__carrousel__bouton">x</button>
+    <section class="boite__carrousel__navigation"></section>
+    
 </div>
 <?php wp_footer() ?>
 </body>
