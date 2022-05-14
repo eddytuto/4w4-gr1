@@ -6,6 +6,7 @@ Navigation pour la page ctegorie.php bouton de categorie
     .menu { //nav
         display: flex;
         list-style-type: none;
+        flex-wrap: wrap;
         .menu-item{ //li
             margin: 0 15px;
             a{

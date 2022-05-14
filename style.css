@@ -593,7 +593,8 @@ html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
 }
 
 .principal {
-  margin: 20px;
+  max-width: 85vw;
+  margin: auto;
   padding: 10px 15px;
   background-color: #4d56b3;
   border-radius: 5px;
@@ -671,7 +672,7 @@ img {
   margin: 10px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   padding: 10px;
 }
 
@@ -988,6 +989,7 @@ Navigation pour la page ctegorie.php bouton de categorie
 .menu-categorie_cours-container .menu {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 
 .menu-categorie_cours-container .menu .menu-item {
@@ -1079,15 +1081,22 @@ Navigation pour la page ctegorie.php bouton de categorie
 /* le parent de la boite__modale est la balise body*/
 .boite__modale, .boite__carrousel {
   position: fixed;
-  width: 50%;
-  height: 50%;
-  top: 25%;
-  left: 25%;
+  width: 100vw;
+  height: 95vh;
   border: 5px solid white;
   background-color: red;
   transform: scale(0);
   transition: all 1s ease-in-out;
   z-index: 300;
+}
+
+@media screen and (min-width: 1100px) {
+  .boite__modale, .boite__carrousel {
+    width: 75%;
+    height: 75%;
+    top: 12.5%;
+    left: 12.5%;
+  }
 }
 
 .boite__modale--ouvrir, .boite__carrousel--ouvrir {
@@ -1107,22 +1116,8 @@ Navigation pour la page ctegorie.php bouton de categorie
   cursor: pointer;
 }
 
-.boite__modale {
-  width: 50%;
-  height: 50%;
-  top: 25%;
-  left: 25%;
-}
-
 .boite__modale__texte {
   overflow: hidden;
-}
-
-.boite__carrousel {
-  width: 75%;
-  height: 75%;
-  top: 12.5%;
-  left: 12.5%;
 }
 
 .boite__carrousel__navigation {
@@ -1173,18 +1168,19 @@ LAYOUT
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.home::after {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 250vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  clip-path: polygon(83% 0, 100% 0, 100% 100%, 63% 100%);
-}
-
+/*
+.home::after{
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: clamp(150vh,200,250vh);
+    
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    clip-path: polygon(83% 0, 100% 0, 100% 100%, 63% 100%);
+}*/
 .site__header {
   grid-area: header;
   background-color: #d6daff;

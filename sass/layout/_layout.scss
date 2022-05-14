@@ -3,17 +3,19 @@
     font-family: $font__main;
 }
 // Segmente le background avec un clip path
+/*
 .home::after{
     content: "";
     position: absolute;
     width: 100vw;
-    height: 250vh;
+    height: clamp(150vh,200,250vh);
+    
     top:0;
     bottom:0;
     left:0;
     right: 0;
     clip-path: polygon(83% 0, 100% 0, 100% 100%, 63% 100%);
-}
+}*/
 
 .site__header{
     grid-area: header;  

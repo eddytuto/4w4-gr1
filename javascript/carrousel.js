@@ -1,4 +1,5 @@
 (function(){
+
   console.log("vive la boîte carrousel")  
   let galerie__img = document.querySelectorAll('.galerie .wp-block-image img')
   console.log("galerie__img.length = " + galerie__img.length)
