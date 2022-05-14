@@ -1081,7 +1081,7 @@ Navigation pour la page ctegorie.php bouton de categorie
 /* le parent de la boite__modale est la balise body*/
 .boite__modale, .boite__carrousel {
   position: fixed;
-  width: 100vw;
+  width: 95vw;
   height: 95vh;
   border: 5px solid white;
   background-color: red;
@@ -1118,6 +1118,9 @@ Navigation pour la page ctegorie.php bouton de categorie
 
 .boite__modale__texte {
   overflow: hidden;
+  text-align: justify;
+  margin: 10% 5%;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .boite__carrousel__navigation {
